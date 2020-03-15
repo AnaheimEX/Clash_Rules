@@ -1,24 +1,13 @@
-[custom]
-;所有可能的自定义设置如下所示
-
-;用于自定义组的选项 会覆盖 pref.ini 里的内容
-;使用以下模式生成 Clash 代理组，带有 "[]" 前缀将直接添加
-;Format: Group_Name`select`Rule_1`Rule_2`...
-;        Group_Name`url-test|fallback|load-balance`Rule_1`Rule_2`...`test_url`interval
-;Rule with "[]" prefix will be added directly.
+;用于自定义策略组的选项
 custom_proxy_group=MainProxy`select``.*
 custom_proxy_group=Comic`select`(台|东京)
 custom_proxy_group=奶飞`select`(港|东京)
 custom_proxy_group=国外媒体`select`[]MainProxy`.*
-#custom_proxy_group=国内媒体`select`[]Direct
 custom_proxy_group=Telegram`select`(新|港)
-#custom_proxy_group=Domestic`select`[]DIRECT
 custom_proxy_group=其他`select`[]MainProxy`.*
+;用于自定义策略组的选项
 
-;用于自定义规则的选项 会覆盖 pref.ini 里的内容
-;Ruleset addresses, supports local files/URL
-;Format: Group name,URL
-;        Group name,[]Rule
+;用于自定义规则的选项
 surge_ruleset=DIRECT,https://raw.githubusercontent.com/AnaheimEX/Anaheim-Clash/master/LocalAreaNetwork.list
 surge_ruleset=DIRECT,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/Unbreak.list
 surge_ruleset=DIRECT,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/AsianTV.list
@@ -31,18 +20,10 @@ surge_ruleset=国外媒体,https://raw.githubusercontent.com/ConnersHua/Profiles
 surge_ruleset=MainProxy,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/Global.list
 surge_ruleset=DIRECT,[]GEOIP,CN
 surge_ruleset=其他,[]FINAL
+;用于自定义规则的选项
 
 ;用于自定义基础配置的选项 会覆盖 pref.ini 里的内容
 clash_rule_base=https://raw.githubusercontent.com/lhie1/Rules/master/Clash/Head_dns.yaml
 
-;用于自定义重命名的选项 会覆盖 pref.ini 里的内容
-;rename=Test-(.*?)-(.*?)-(.*?)\((.*?)\)@\1\4x测试线路_自\2到\3
-;rename=\(?((x|X)?(\d+)(\.?\d+)?)((\s?倍率?)|(x|X))\)?@$1x
-
-;用于自定义 Emoji 的选项 会覆盖 pref.ini 里的内容
-;emoji=(流量|时间|应急),🏳️‍🌈
-;emoji=阿根廷,🇦🇷
-
 ;用于包含或排除节点关键词的选项 会覆盖 pref.ini 里的内容
-;include_remarks=(L5|L6)
 exclude_remarks=(到期|剩余流量|时间|官网|产品)
