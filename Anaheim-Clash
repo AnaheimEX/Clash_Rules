@@ -7,8 +7,8 @@
 ;        Group_Name`url-test|fallback|load-balance`Rule_1`Rule_2`...`test_url`interval
 ;Rule with "[]" prefix will be added directly.
 custom_proxy_group=MainProxy`select``.*
-custom_proxy_group=Comic`select`(台|港)
-custom_proxy_group=奶飞`select`(新|港)
+custom_proxy_group=Comic`select`(台|东京)
+custom_proxy_group=奶飞`select`(港|东京)
 custom_proxy_group=国外媒体`select`[]MainProxy`.*
 #custom_proxy_group=国内媒体`select`[]Direct
 custom_proxy_group=Telegram`select`(新|港)
@@ -46,5 +46,5 @@ clash_rule_base=https://raw.githubusercontent.com/lhie1/Rules/master/Clash/Head_
 ;emoji=阿根廷,🇦🇷
 
 ;用于包含或排除节点关键词的选项 会覆盖 pref.ini 里的内容
-include_remarks=(L5|L6)
+;include_remarks=(L5|L6)
 exclude_remarks=(到期|剩余流量|时间|官网|产品)
