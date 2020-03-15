@@ -19,8 +19,6 @@ custom_proxy_group=其他`select`[]MainProxy`.*
 ;Ruleset addresses, supports local files/URL
 ;Format: Group name,URL
 ;        Group name,[]Rule
-enable_rule_generator=false
-overwrite_original_rules=false
 surge_ruleset=DIRECT,https://raw.githubusercontent.com/AnaheimEX/Anaheim-Clash/master/LocalAreaNetwork.list
 surge_ruleset=DIRECT,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/Unbreak.list
 surge_ruleset=DIRECT,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/AsianTV.list
