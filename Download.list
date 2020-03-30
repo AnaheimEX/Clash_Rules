@@ -22,3 +22,6 @@ PROCESS-NAME,DownloadService
 URL-REGEX,(.+\.|^)(360|so)\.(cn|com)
 # Tencent Weiyun
 PROCESS-NAME,Weiyun
+# > S1
+DOMAIN-SUFFIX,stage3rd.com
+DOMAIN-SUFFIX,saraba1st.com
