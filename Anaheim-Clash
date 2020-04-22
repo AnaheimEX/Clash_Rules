@@ -9,7 +9,6 @@ custom_proxy_group=其他`select`[]MainProxy`.*
 
 ;用于自定义规则的选项
 surge_ruleset=DIRECT,https://raw.githubusercontent.com/AnaheimEX/Anaheim-Clash/master/LocalAreaNetwork.list
-surge_ruleset=DIRECT,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/Unbreak.list
 surge_ruleset=DIRECT,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Media/Bilibili.list
 surge_ruleset=DIRECT,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Media/iQiyi.list
 surge_ruleset=DIRECT,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Media/MOO.list
@@ -18,16 +17,16 @@ surge_ruleset=DIRECT,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/
 surge_ruleset=DIRECT,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Domestic.list
 surge_ruleset=DIRECT,https://raw.githubusercontent.com/AnaheimEX/Clash/master/Download.list
 surge_ruleset=Telegram,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Telegram.list
-surge_ruleset=Comic,https://raw.githubusercontent.com/AnaheimEX/Clash/master/custom.list
-surge_ruleset=奶飞,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/Media/Netflix.list
-surge_ruleset=国外媒体,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/GlobalMedia.list
+surge_ruleset=Custom,https://raw.githubusercontent.com/AnaheimEX/Clash/master/custom.list
+surge_ruleset=Netflix,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/Media/Netflix.list
+surge_ruleset=GlobalMedia,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/GlobalMedia.list
 surge_ruleset=MainProxy,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Proxy.list
 surge_ruleset=DIRECT,[]GEOIP,CN
-surge_ruleset=其他,[]FINAL
+surge_ruleset=Other,[]FINAL
 ;用于自定义规则的选项
 
 ;用于自定义基础配置的选项 会覆盖 pref.ini 里的内容
 ;clash_rule_base=https://raw.githubusercontent.com/lhie1/Rules/master/Clash/Head_dns.yaml
 
 ;用于包含或排除节点关键词的选项 会覆盖 pref.ini 里的内容
-exclude_remarks=(到期|剩余流量|时间|官网|产品|反馈)
+exclude_remarks=(到期|剩余流量|时间|官网|产品|反馈|L3|L4|L5)
