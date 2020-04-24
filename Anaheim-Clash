@@ -1,6 +1,7 @@
 ;用于自定义策略组的选项
 custom_proxy_group=MainProxy`select``.*
-custom_proxy_group=Comic`select`(台|东京)
+custom_proxy_group=Custom`select`(台|东京)
+custom_proxy_group=Microsoft`select`[]DIRECT`(港)
 custom_proxy_group=Netflix`select`(港|台|新)
 custom_proxy_group=GlobalMedia`select`[]MainProxy`.*
 custom_proxy_group=Telegram`select`(新|港)
@@ -14,10 +15,11 @@ surge_ruleset=DIRECT,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/
 surge_ruleset=DIRECT,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Media/MOO.list
 surge_ruleset=DIRECT,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Media/Tencent%20Video.list
 surge_ruleset=DIRECT,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Media/Youku.list
-surge_ruleset=DIRECT,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Domestic.list
 surge_ruleset=DIRECT,https://raw.githubusercontent.com/AnaheimEX/Clash/master/Download.list
-surge_ruleset=Telegram,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Telegram.list
+surge_ruleset=DIRECT,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Domestic.list
 surge_ruleset=Custom,https://raw.githubusercontent.com/AnaheimEX/Clash/master/custom.list
+surge_ruleset=Microsoft,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Microsoft.list
+surge_ruleset=Telegram,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Telegram.list
 surge_ruleset=Netflix,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/Media/Netflix.list
 surge_ruleset=GlobalMedia,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/GlobalMedia.list
 surge_ruleset=MainProxy,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Proxy.list
