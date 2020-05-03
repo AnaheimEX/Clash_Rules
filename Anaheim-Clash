@@ -31,4 +31,4 @@ surge_ruleset=Other,[]FINAL
 ;clash_rule_base=https://raw.githubusercontent.com/lhie1/Rules/master/Clash/Head_dns.yaml
 
 ;用于包含或排除节点关键词的选项 会覆盖 pref.ini 里的内容
-exclude_remarks=(到期|剩余流量|时间|官网|产品|反馈|L3|L4|L5)
+exclude_remarks=(到期|剩余流量|时间|官网|产品|反馈|L3|L4)
