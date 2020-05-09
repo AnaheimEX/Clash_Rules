@@ -10,3 +10,11 @@ DOMAIN-KEYWORD,hath.network
 # > TTG
 DOMAIN-SUFFIX,totheglory.im
 DOMAIN-KEYWORD,totheglory
+
+# > Notion
+DOMAIN-SUFFIX,loggly.com
+DOMAIN-SUFFIX,segment.com
+DOMAIN-SUFFIX,intercom.io
+DOMAIN-SUFFIX,intercomcdn.com
+DOMAIN-SUFFIX,amplitude.com
+DOMAIN-SUFFIX,amazonaws.com
