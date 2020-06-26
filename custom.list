@@ -17,12 +17,10 @@ DOMAIN-SUFFIX,segment.com
 DOMAIN-SUFFIX,intercom.io
 DOMAIN-SUFFIX,intercomcdn.com
 DOMAIN-SUFFIX,amplitude.com
-DOMAIN-SUFFIX,amazonaws.com
 DOMAIN-SUFFIX,notion.so
 DOMAIN-KEYWORD,notion
 DOMAIN-KEYWORD,segment
 DOMAIN-KEYWORD,intercomcdn
-DOMAIN-SUFFIX,prod-notion-assets.s3-us-west-2.amazonaws.com
 
 ＃ > DMM
 DOMAIN-SUFFIX,DMM.co.jp
