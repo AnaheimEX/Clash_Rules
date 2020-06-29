@@ -24,7 +24,7 @@ surge_ruleset=Netflix,https://raw.githubusercontent.com/ConnersHua/Profiles/mast
 surge_ruleset=GlobalMedia,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/GlobalMedia.list
 surge_ruleset=MainProxy,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Proxy.list
 surge_ruleset=DIRECT,[]GEOIP,CN
-surge_ruleset=Other,[]FINAL
+surge_ruleset=Other,[]MATCH
 ;用于自定义规则的选项
 
 ;用于自定义基础配置的选项 会覆盖 pref.ini 里的内容
