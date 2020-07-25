@@ -1,6 +1,6 @@
 ;用于自定义策略组的选项
 custom_proxy_group=MainProxy`select``.*
-custom_proxy_group=JPSites`select`[](日本)
+custom_proxy_group=JPSites`select`[]`(日本)
 custom_proxy_group=Custom`select`[]MainProxy`(台|日本)
 custom_proxy_group=Microsoft`select`[]DIRECT`(港)
 custom_proxy_group=Netflix`select`[]MainProxy`(港|台|新)
