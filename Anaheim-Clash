@@ -1,5 +1,6 @@
 ;用于自定义策略组的选项
 custom_proxy_group=MainProxy`select``.*
+custom_proxy_group=JPSites`select`[](日本)
 custom_proxy_group=Custom`select`[]MainProxy`(台|日本)
 custom_proxy_group=Microsoft`select`[]DIRECT`(港)
 custom_proxy_group=Netflix`select`[]MainProxy`(港|台|新)
@@ -17,10 +18,11 @@ surge_ruleset=DIRECT,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/
 surge_ruleset=DIRECT,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Media/Youku.list
 surge_ruleset=DIRECT,https://raw.githubusercontent.com/AnaheimEX/Clash/master/Download.list
 surge_ruleset=DIRECT,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Domestic.list
-surge_ruleset=Custom,https://raw.githubusercontent.com/AnaheimEX/Clash/master/custom.list
+surge_ruleset=Custom,https://raw.githubusercontent.com/AnaheimEX/Clash/master/Custom.list
+surge_ruleset=Custom,https://raw.githubusercontent.com/AnaheimEX/Clash/master/JPSites.list
 surge_ruleset=Microsoft,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Microsoft.list
 surge_ruleset=Telegram,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Telegram.list
-surge_ruleset=Netflix,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/Media/Netflix.list
+surge_ruleset=Netflix,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Media/Netflix.list
 surge_ruleset=GlobalMedia,https://raw.githubusercontent.com/ConnersHua/Profiles/master/Surge/Ruleset/GlobalMedia.list
 surge_ruleset=MainProxy,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Proxy.list
 surge_ruleset=DIRECT,[]GEOIP,CN
@@ -28,7 +30,7 @@ surge_ruleset=Other,[]MATCH
 ;用于自定义规则的选项
 
 ;用于自定义基础配置的选项 会覆盖 pref.ini 里的内容
-;clash_rule_base=https://raw.githubusercontent.com/lhie1/Rules/master/Clash/Head_dns.yaml
+clash_rule_base=https://raw.githubusercontent.com/lhie1/Rules/master/Clash/Head.yaml
 
 ;用于包含或排除节点关键词的选项 会覆盖 pref.ini 里的内容
 exclude_remarks=(到期|剩余流量|时间|官网|产品|反馈|L3|L4)
