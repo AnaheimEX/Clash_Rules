@@ -28,6 +28,7 @@ surge_ruleset=Youtube,https://raw.githubusercontent.com/lhie1/Rules/master/Surge
 surge_ruleset=Steam,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Steam.list
 surge_ruleset=MainProxy,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Proxy.list
 surge_ruleset=DIRECT,[]GEOIP,CN
+surge_ruleset=JPSites,[]GEOIP,JP
 surge_ruleset=Other,[]MATCH
 ;用于自定义规则的选项
 
