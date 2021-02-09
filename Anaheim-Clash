@@ -3,9 +3,10 @@ custom_proxy_group=MainProxy`select``.*
 custom_proxy_group=JPSites`select`[]MainProxy`(日本|JP)
 custom_proxy_group=Custom`select`[]MainProxy`(台|日本|JP|TW)
 custom_proxy_group=Microsoft`select`[]DIRECT`(港|HK)
-custom_proxy_group=Netflix`select`[]MainProxy`(港|台|新|TW|SG)
+custom_proxy_group=Netflix`select`[]MainProxy`(台|新|TW|SG)
 custom_proxy_group=Youtube`select`[]MainProxy`.*
 custom_proxy_group=Telegram`select`[]MainProxy`(新|港|SG|HK)
+custom_proxy_group=Steam`select`[]DIRECT`(港|HK)
 custom_proxy_group=Other`select`[]MainProxy`.*
 ;用于自定义策略组的选项
 
@@ -24,6 +25,7 @@ surge_ruleset=Microsoft,https://raw.githubusercontent.com/lhie1/Rules/master/Sur
 surge_ruleset=Telegram,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Telegram.list
 surge_ruleset=Netflix,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Media/Netflix.list
 surge_ruleset=Youtube,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Media/YouTube.list
+surge_ruleset=Steam,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Steam.list
 surge_ruleset=MainProxy,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Proxy.list
 surge_ruleset=DIRECT,[]GEOIP,CN
 surge_ruleset=Other,[]MATCH
