@@ -2,6 +2,11 @@
 DOMAIN-SUFFIX,manhuagui.com
 DOMAIN-SUFFIX,hamreus.com
 
+# > Logitechg
+DOMAIN-SUFFIX,logitechg.com
+DOMAIN_KEYWORD,logitech
+DOMAIN-SUFFIX,logitech.com
+
 # >EXhentai
 DOMAIN-SUFFIX,exhentai.org
 DOMAIN-KEYWORD,exhentai
