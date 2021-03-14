@@ -3,7 +3,7 @@ custom_proxy_group=MainProxy`select``.*
 custom_proxy_group=JPSites`select`[]MainProxy`(日本|JP)
 custom_proxy_group=Custom`select`[]MainProxy`(台|日本|JP|TW)
 custom_proxy_group=Microsoft`select`[]DIRECT`(港|HK)
-custom_proxy_group=Netflix`select`[]MainProxy`(台|新|TW|SG|日|JP)
+custom_proxy_group=Netflix`select`[]MainProxy`(台|新|日|TW|SG|JP)
 custom_proxy_group=Youtube`select`[]MainProxy`.*
 custom_proxy_group=Telegram`select`[]MainProxy`(新|港|SG|HK)
 custom_proxy_group=Steam`select`[]DIRECT`(港|HK)
@@ -36,4 +36,4 @@ surge_ruleset=Other,[]MATCH
 clash_rule_base=https://raw.githubusercontent.com/lhie1/Rules/master/Clash/Head_tap.yaml
 
 ;用于包含或排除节点关键词的选项 会覆盖 pref.ini 里的内容
-exclude_remarks=(到期|剩余流量|时间|官网|产品|反馈|L3|L4|AGA|NTT|PCCW|GIA|CHT|Azure|HE|)
+exclude_remarks=(到期|剩余流量|时间|官网|产品|反馈|L3|L4|AGA|NTT|PCCW|GIA|CHT|Azure|HE)
