@@ -6,7 +6,7 @@ custom_proxy_group=Microsoft`select`[]DIRECT`(港|HK)
 custom_proxy_group=Netflix`select`[]MainProxy`(台|新|日|TW|SG|JP)
 custom_proxy_group=Youtube`select`[]MainProxy`.*
 custom_proxy_group=Telegram`select`[]MainProxy`(新|港|SG|HK)
-custom_proxy_group=Steam`select`[]`(港|HK)
+custom_proxy_group=Steam`select`[](港|HK)
 custom_proxy_group=Other`select`[]MainProxy`.*
 ;用于自定义策略组的选项
 
@@ -39,4 +39,4 @@ overwrite_original_rules=true
 clash_rule_base=https://raw.githubusercontent.com/lhie1/Rules/master/Clash/Head_tap.yaml
 
 ;用于包含或排除节点关键词的选项 会覆盖 pref.ini 里的内容
-exclude_remarks=(AGA|NTT|PCCW|GIA|CHT|Azure|HE)
+exclude_remarks=(AGA|NTT|PCCW|GIA|CHT|Azure|HE|剩余|过期)
