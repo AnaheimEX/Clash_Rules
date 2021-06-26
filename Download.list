@@ -1,3 +1,6 @@
+# steamChinaCDN
+DOMAIN-SUFFIX,steampowered.com
+
 # Mac Download
 PROCESS-NAME,aria2c
 PROCESS-NAME,fdm
