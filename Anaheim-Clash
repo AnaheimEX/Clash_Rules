@@ -36,7 +36,7 @@ enable_rule_generator=true
 overwrite_original_rules=true
 
 ;用于自定义基础配置的选项 会覆盖 pref.ini 里的内容
-clash_rule_base=https://raw.githubusercontent.com/lhie1/Rules/master/Clash/Head_tap.yaml
+clash_rule_base=https://raw.githubusercontent.com/AnaheimEX/Clash_Rules/master/Head.yaml
 
 ;用于包含或排除节点关键词的选项 会覆盖 pref.ini 里的内容
 exclude_remarks=(AGA|NTT|PCCW|GIA|CHT|Azure|HE|剩余|过期)
