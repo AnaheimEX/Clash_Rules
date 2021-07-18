@@ -112,7 +112,7 @@ rule-providers:
     type: http
     behavior: domain
     url: "https://raw.githubusercontent.com/lhie1/Rules/master/Clash/Provider/Proxy.yaml"
-    path: ./ruleset/google.yaml
+    path: ./ruleset/Proxy.yaml
     interval: 86400
     
 rules:
@@ -135,4 +135,4 @@ rules:
 - RULE-SET,Proxy,MainProxy
 - GEOIP,JP,JPSites
 - GEOIP,CN,DIRECT
-- MATCH,Global
+- MATCH,Others
