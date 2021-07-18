@@ -21,12 +21,11 @@ rule-providers:
     type: http
     behavior: domain
     url: "https://raw.githubusercontent.com/AnaheimEX/Clash/master/Custom.list"
-    path: ./ruleset/Custom.yaml
     interval: 86400
   Domestic:
     type: http
     behavior: domain
-    url: "https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Domestic.list"
+    url: "https://raw.githubusercontent.com/lhie1/Rules/master/Clash/Provider/Domestic.yaml"
     path: ./ruleset/Domestic.yaml
     interval: 86400
   Domestic IPs:
@@ -38,19 +37,19 @@ rule-providers:
   Youku:
     type: http
     behavior: domain
-    url: "https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Media/Youku.list"
+    url: "https://raw.githubusercontent.com/lhie1/Rules/master/Clash/Provider/Media/Youku.yaml"
     path: ./ruleset/Youku.yaml
     interval: 86400
   Tencent Video:
     type: http
     behavior: domain
-    url: "https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Media/Tencent%20Video.list"
+    url: "https://raw.githubusercontent.com/lhie1/Rules/master/Clash/Provider/Media/Tencent%20Video.yaml"
     path: ./ruleset/TencentVideo.yaml
     interval: 86400
   Bilibili:
     type: http
     behavior: domain
-    url: "https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Media/Bilibili.list"
+    url: "https://raw.githubusercontent.com/lhie1/Rules/master/Clash/Provider/Media/Bilibili.yaml"
     interval: 86400
   LAN:
     type: http
@@ -62,18 +61,18 @@ rule-providers:
     type: http
     behavior: domain
     url: "https://raw.githubusercontent.com/AnaheimEX/Clash_Rules/master/Steam.list"
-    path: ./ruleset/Steam.yaml
+    path: ./ruleset/Steam.list
     interval: 86400
   YouTube:
     type: http
     behavior: domain
-    url: "https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Media/YouTube.list"
+    url: "https://raw.githubusercontent.com/lhie1/Rules/master/Clash/Provider/Media/YouTube.yaml"
     path: ./ruleset/YouTube.yaml
     interval: 86400
   Netflix:
     type: http
     behavior: domain
-    url: "https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Media/Netflix.list"
+    url: "https://raw.githubusercontent.com/lhie1/Rules/master/Clash/Provider/Media/Netflix.yaml"
     path: ./ruleset/Netflix.yaml
     interval: 86400
   Disney Plus:
@@ -85,20 +84,20 @@ rule-providers:
   Telegram:
     type: http
     behavior: domain
-    url: "https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Telegram.list"
+    url: "https://raw.githubusercontent.com/lhie1/Rules/master/Clash/Provider/Telegram.yaml"
     path: ./ruleset/Telegram.yaml
     interval: 86400
   Microsoft:
     type: http
     behavior: domain
-    url: "https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Microsoft.list"
+    url: "https://raw.githubusercontent.com/lhie1/Rules/master/Clash/Provider/Microsoft.yaml"
     path: ./ruleset/Microsoft.yaml
     interval: 86400
   JP:
     type: http
     behavior: domain
     url: "https://raw.githubusercontent.com/AnaheimEX/Clash/master/JPSites.list"
-    path: ./ruleset/JPSites.yaml
+    path: ./ruleset/JPSites.list
     interval: 86400
   Proxy:
     type: http
