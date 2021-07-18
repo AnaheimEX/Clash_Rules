@@ -133,7 +133,6 @@ rules:
 - RULE-SET,YouTube,YouTube
 - RULE-SET,Steam,Steam
 - RULE-SET,Proxy,MainProxy
-- GEOIP,,DIRECT
-- GEOIP,JP,Direct
+- GEOIP,JP,JPSites
 - GEOIP,CN,DIRECT
 - MATCH,Global
