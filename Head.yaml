@@ -110,7 +110,6 @@ rules:
 - RULE-SET,Custom,Custom
 - RULE-SET,Youku,DIRECT
 - RULE-SET,Tencent Video,DIRECT
-- RULE-SET,Bilibili,DIRECT
 - RULE-SET,LAN,DIRECT
 - RULE-SET,JP,JPSites
 - RULE-SET,Microsoft,Microsoft
