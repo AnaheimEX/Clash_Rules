@@ -10,3 +10,130 @@ experimental:
 clash-for-android: 
   # append-system-dns: true # 追加系统 DNS 到 nameserver 
   ui-subtitle-pattern: "[\u4e00-\u9fa5]{2,4}"
+
+rule-providers:
+  Down:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/AnaheimEX/Clash/master/Download.list"
+    path: ./ruleset/Download.yaml
+    interval: 86400
+  Custom:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/AnaheimEX/Clash/master/Custom.list"
+    path: ./ruleset/Custom.yaml
+    interval: 86400
+  Domestic:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Domestic.list"
+    path: ./ruleset/Domestic.yaml
+    interval: 86400
+  Domestic IPs:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/lhie1/Rules/master/Clash/Provider/Domestic%20IPs.yaml"
+    path: ./ruleset/Domestic IPs.yaml
+    interval: 86400
+  Youku:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Media/Youku.list"
+    path: ./ruleset/Youku.yaml
+    interval: 86400
+  Tencent Video:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Media/Tencent%20Video.list"
+    path: ./ruleset/TencentVideo.yaml
+    interval: 86400
+  iQiyi:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Media/iQiyi.list"
+    path: ./ruleset/iQiyi.yaml
+    interval: 86400
+  Bilibili:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Media/Bilibili.list"
+    path: ./ruleset/Bilibili.yaml
+    interval: 86400
+  LAN:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/lhie1/Rules/master/Clash/Provider/LAN.yaml"
+    path: ./ruleset/LAN.yaml
+    interval: 86400
+  Steam:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/AnaheimEX/Clash_Rules/master/Steam.list"
+    path: ./ruleset/Steam.yaml
+    interval: 86400
+  YouTube:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Media/YouTube.list"
+    path: ./ruleset/YouTube.yaml
+    interval: 86400
+  Netflix:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Media/Netflix.list"
+    path: ./ruleset/Netflix.yaml
+    interval: 86400
+  Disney Plus:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/lhie1/Rules/master/Clash/Provider/Media/Disney%20Plus.yaml"
+    path: ./ruleset/Disney Plus.yaml
+    interval: 86400
+  Telegram:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Telegram.list"
+    path: ./ruleset/Telegram.yaml
+    interval: 86400
+  Microsoft:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Microsoft.list"
+    path: ./ruleset/Microsoft.yaml
+    interval: 86400
+  JP:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/AnaheimEX/Clash/master/JPSites.list"
+    path: ./ruleset/JPSites.yaml
+    interval: 86400
+  Proxy:
+    type: http
+    behavior: domain
+    url: "https://raw.githubusercontent.com/lhie1/Rules/master/Clash/Provider/Proxy.yaml"
+    path: ./ruleset/google.yaml
+    interval: 86400
+    
+rules:
+- RULE-SET,Down,DIRECT
+- RULE-SET,Domestic IPs,DIRECT
+- RULE-SET,Domestic,DIRECT
+- RULE-SET,Custom,Custom
+- RULE-SET,Youku,DIRECT
+- RULE-SET,Tencent Video,DIRECT
+- RULE-SET,iQiyi,DIRECT
+- RULE-SET,Bilibili,DIRECT
+- RULE-SET,LAN,DIRECT
+- RULE-SET,JP,JPSites
+- RULE-SET,Microsoft,Microsoft
+- RULE-SET,Telegram,Telegram
+- RULE-SET,Disney Plus,Disney
+- RULE-SET,Netflix,Netflix
+- RULE-SET,YouTube,YouTube
+- RULE-SET,Steam,Steam
+- RULE-SET,Proxy,MainProxy
+- GEOIP,,DIRECT
+- GEOIP,JP,Direct
+- GEOIP,CN,DIRECT
+- MATCH,Global
