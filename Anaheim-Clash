@@ -4,33 +4,12 @@ custom_proxy_group=JPSites`select`[]MainProxy`(日本|JP)
 custom_proxy_group=Custom`select`[]MainProxy`(台|日本|JP|TW)
 custom_proxy_group=Microsoft`select`[]DIRECT`(港|HK)
 custom_proxy_group=Netflix`select`[]MainProxy`(台|新|日|TW|SG|JP)
+custom_proxy_group=Disney Plus`select`(美|新|USA|SG)
 custom_proxy_group=Youtube`select`[]MainProxy`.*
 custom_proxy_group=Telegram`select`[]MainProxy`(新|港|SG|HK)
 custom_proxy_group=Steam`select`(港|HK)
 custom_proxy_group=Other`select`[]MainProxy`.*
 ;用于自定义策略组的选项
-
-;用于自定义规则的选项
-ruleset=DIRECT,https://raw.githubusercontent.com/AnaheimEX/Anaheim-Clash/master/LocalAreaNetwork.list
-ruleset=DIRECT,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Media/Bilibili.list
-ruleset=DIRECT,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Media/iQiyi.list
-ruleset=DIRECT,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Media/MOO.list
-ruleset=DIRECT,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Media/Tencent%20Video.list
-ruleset=DIRECT,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Media/Youku.list
-ruleset=DIRECT,https://raw.githubusercontent.com/AnaheimEX/Clash/master/Download.list
-ruleset=DIRECT,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Domestic.list
-ruleset=Custom,https://raw.githubusercontent.com/AnaheimEX/Clash/master/Custom.list
-ruleset=JPSites,https://raw.githubusercontent.com/AnaheimEX/Clash/master/JPSites.list
-ruleset=Microsoft,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Microsoft.list
-ruleset=Telegram,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Telegram.list
-ruleset=Netflix,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Media/Netflix.list
-ruleset=Youtube,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Media/YouTube.list
-ruleset=Steam,https://raw.githubusercontent.com/AnaheimEX/Clash_Rules/master/Steam.list
-ruleset=MainProxy,https://raw.githubusercontent.com/lhie1/Rules/master/Surge/Surge%203/Provider/Proxy.list
-ruleset=DIRECT,[]GEOIP,CN
-ruleset=JPSites,[]GEOIP,JP
-ruleset=Other,[]MATCH
-;用于自定义规则的选项
 
 enable_rule_generator=true
 overwrite_original_rules=true
