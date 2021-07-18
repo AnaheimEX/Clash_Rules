@@ -48,12 +48,6 @@ rule-providers:
     url: "https://raw.githubusercontent.com/lhie1/Rules/master/Clash/Provider/Media/Tencent%20Video.yaml"
     path: ./ruleset/TencentVideo.yaml
     interval: 86400
-  Bilibili:
-    type: http
-    behavior: domain
-    url: "https://raw.githubusercontent.com/lhie1/Rules/master/Clash/Provider/Media/Bilibili.yaml"
-    path: ./ruleset/Bilibili.yaml
-    interval: 86400
   LAN:
     type: http
     behavior: domain
