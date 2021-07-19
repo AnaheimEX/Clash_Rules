@@ -57,7 +57,7 @@ rule-providers:
   Steam:
     type: http
     behavior: domain
-    url: 'https://cdn.jsdelivr.net/gh/AnaheimEX/Clash_Rules@master/Steam.list'
+    url: 'https://cdn.jsdelivr.net/gh/AnaheimEX/Clash_Rules@master/Steam.yaml'
     path: ./Rules/Steam
     interval: 86400
   YouTube:
