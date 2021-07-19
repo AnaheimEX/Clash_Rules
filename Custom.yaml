@@ -1,26 +1,26 @@
 payload:  
 # > Manhuagui
-DOMAIN-SUFFIX,manhuagui.com
-DOMAIN-SUFFIX,hamreus.com
+  - DOMAIN-SUFFIX,manhuagui.com
+  - DOMAIN-SUFFIX,hamreus.com
 
 # > Logitechg
-DOMAIN-SUFFIX,logitechg.com
-DOMAIN-KEYWORD,logitech
-DOMAIN-SUFFIX,logitech.com
+  - DOMAIN-SUFFIX,logitechg.com
+  - DOMAIN-KEYWORD,logitech
+  - DOMAIN-SUFFIX,logitech.com
 
 # >EXhentai
-DOMAIN-SUFFIX,exhentai.org
-DOMAIN-KEYWORD,exhentai
-DOMAIN-KEYWORD,hath.network
+  - DOMAIN-SUFFIX,exhentai.org
+  - DOMAIN-KEYWORD,exhentai
+  - DOMAIN-KEYWORD,hath.network
 
 # > Notion
-DOMAIN-SUFFIX,loggly.com
-DOMAIN-SUFFIX,segment.com
-DOMAIN-SUFFIX,intercom.io
-DOMAIN-SUFFIX,intercomcdn.com
-DOMAIN-SUFFIX,amplitude.com
-DOMAIN-SUFFIX,notion.so
-DOMAIN-KEYWORD,notion
-DOMAIN-KEYWORD,segment
-DOMAIN-KEYWORD,intercomcdn
-DOMAIN-SUFFIX,amazonaws.com
+  - DOMAIN-SUFFIX,loggly.com
+  - DOMAIN-SUFFIX,segment.com
+  - DOMAIN-SUFFIX,intercom.io
+  - DOMAIN-SUFFIX,intercomcdn.com
+  - DOMAIN-SUFFIX,amplitude.com
+  - DOMAIN-SUFFIX,notion.so
+  - DOMAIN-KEYWORD,notion
+  - DOMAIN-KEYWORD,segment
+  - DOMAIN-KEYWORD,intercomcdn
+  - DOMAIN-SUFFIX,amazonaws.com
