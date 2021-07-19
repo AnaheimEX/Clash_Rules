@@ -90,12 +90,6 @@ rule-providers:
     url: 'https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Microsoft.yaml'
     path: ./Rules/Microsoft
     interval: 86400
-  JP:
-    type: http
-    behavior: domain
-    url: 'https://cdn.jsdelivr.net/gh/AnaheimEX/Clash_Rules@master/JPSites.yaml'
-    path: ./Rules/JPSites
-    interval: 86400
   Proxy:
     type: http
     behavior: domain
@@ -111,7 +105,6 @@ rules:
   - RULE-SET,Youku,DIRECT
   - RULE-SET,Tencent Video,DIRECT
   - RULE-SET,LAN,DIRECT
-  - RULE-SET,JP,JPSites
   - RULE-SET,Microsoft,Microsoft
   - RULE-SET,Telegram,Telegram
   - RULE-SET,Disney Plus,Disney
