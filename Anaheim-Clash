@@ -1,14 +1,14 @@
 ;用于自定义策略组的选项
 custom_proxy_group=PROXY`select``.*
-custom_proxy_group=JPSites`select`[]MainProxy`(日本|JP)
-custom_proxy_group=Custom`select`[]MainProxy`(台|日本|JP|TW)
+custom_proxy_group=JPSites`select`[]PROXY`(日本|JP)
+custom_proxy_group=Custom`select`[]PROXY`(台|日本|JP|TW)
 custom_proxy_group=Microsoft`select`[]DIRECT`(港|HK)
-custom_proxy_group=Netflix`select`[]MainProxy`(台|新|日|TW|SG|JP)
+custom_proxy_group=Netflix`select`[]PROXY`(台|新|日|TW|SG|JP)
 custom_proxy_group=Disney`select`(美|新|USA|SG)
-custom_proxy_group=YouTube`select`[]MainProxy`.*
-custom_proxy_group=Telegram`select`[]MainProxy`(新|港|SG|HK)
+custom_proxy_group=YouTube`select`[]PROXY`.*
+custom_proxy_group=Telegram`select`[]PROXY`(新|港|SG|HK)
 custom_proxy_group=Steam`select`(港|HK)
-custom_proxy_group=Others`select`[]MainProxy`.*
+custom_proxy_group=Others`select`[]PROXY`.*
 ;用于自定义策略组的选项
 
 enable_rule_generator=true
