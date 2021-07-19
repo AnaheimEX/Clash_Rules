@@ -11,9 +11,6 @@ custom_proxy_group=Steam`select`(港|HK)
 custom_proxy_group=Others`select`[]PROXY`.*
 ;用于自定义策略组的选项
 
-enable_rule_generator=true
-overwrite_original_rules=true
-
 ;用于自定义基础配置的选项 会覆盖 pref.ini 里的内容
 clash_rule_base=https://raw.githubusercontent.com/AnaheimEX/Clash_Rules/master/Head.yaml
 
