@@ -15,13 +15,13 @@ rule-providers:
   Down:
     type: http
     behavior: domain
-    url: "https://raw.githubusercontent.com/AnaheimEX/Clash/master/Download.list"
+    url: "https://raw.githubusercontent.com/AnaheimEX/Clash/master/Download.yaml"
     path: ./Rules/Download
     interval: 86400
   Custom:
     type: http
     behavior: domain
-    url: "https://raw.githubusercontent.com/AnaheimEX/Clash/master/Custom.list"
+    url: "https://raw.githubusercontent.com/AnaheimEX/Clash/master/Custom.yaml"
     path: ./Rules/Custom
     interval: 86400
   Domestic:
@@ -93,7 +93,7 @@ rule-providers:
   JP:
     type: http
     behavior: domain
-    url: "https://raw.githubusercontent.com/AnaheimEX/Clash/master/JPSites.list"
+    url: "https://raw.githubusercontent.com/AnaheimEX/Clash/master/JPSites.yaml"
     path: ./Rules/JPSites
     interval: 86400
   Proxy:
