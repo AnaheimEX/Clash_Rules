@@ -1,5 +1,5 @@
 ;用于自定义策略组的选项
-custom_proxy_group=MainProxy`select``.*
+custom_proxy_group=PROXY`select``.*
 custom_proxy_group=JPSites`select`[]MainProxy`(日本|JP)
 custom_proxy_group=Custom`select`[]MainProxy`(台|日本|JP|TW)
 custom_proxy_group=Microsoft`select`[]DIRECT`(港|HK)
