@@ -6,3 +6,7 @@ payload:
   - DOMAIN-SUFFIX,granbluefantasy.jp
   - DOMAIN,game.granbluefantasy.jp
   - DOMAIN-KEYWORD,granbluefantasy
+  - DOMAIN,game-a.granbluefantasy.jp
+  - DOMAIN-SUFFIX,game-a.granbluefantasy.jp
+  - DOMAIN,game-a1.granbluefantasy.jp
+  - DOMAIN-SUFFIX,game-a1.granbluefantasy.jp
