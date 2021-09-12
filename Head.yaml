@@ -75,6 +75,12 @@ rule-providers:
     url: 'https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/LAN.yaml'
     path: ./Rules/LAN
     interval: 86400
+  JP:
+    type: http
+    behavior: domain
+    url: 'https://cdn.jsdelivr.net/gh/AnaheimEX/Clash_Rules@master/JPSites.yaml'
+    path: ./Rules/JPSites
+    interval: 86400
   Steam:
     type: http
     behavior: domain
@@ -96,7 +102,7 @@ rule-providers:
   Disney Plus:
     type: http
     behavior: domain
-    url: 'https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/Discovery%20Plus.yaml'
+    url: 'https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/Disney%20Plus.yaml'
     path: ./Rules/Media/Disney Plus
     interval: 86400
   Telegram:
@@ -111,19 +117,13 @@ rule-providers:
     url: 'https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Microsoft.yaml'
     path: ./Rules/Microsoft
     interval: 86400
-  JP:
-    type: http
-    behavior: domain
-    url: 'https://cdn.jsdelivr.net/gh/AnaheimEX/Clash_Rules@master/JPSites.yaml'
-    path: ./Rules/JPSites
-    interval: 86400
   Proxy:
     type: http
     behavior: domain
     url: 'https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Proxy.yaml'
     path: ./Rules/Proxy
     interval: 86400
-
+    
 rules:
   - RULE-SET,Down,DIRECT
   - RULE-SET,Domestic IPs,DIRECT
