@@ -63,6 +63,12 @@ rule-providers:
     url: 'https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/Youku.yaml'
     path: .Rules/Media/Youku
     interval: 86400
+  Apple:
+    type: http
+    behavior: domain
+    url: 'https://cdn.jsdelivr.net/gh/AnaheimEX/Clash_Rules@master/Apple.yaml'
+    path: .Rules/Apple
+    interval: 86400 
   Tencent Video:
     type: http
     behavior: domain
@@ -130,11 +136,12 @@ rules:
   - RULE-SET,Domestic,DIRECT
   - RULE-SET,Custom,Custom
   - RULE-SET,Youku,DIRECT
+  - RULE-SET,Apple,DIRECT
   - RULE-SET,Tencent Video,DIRECT
   - RULE-SET,LAN,DIRECT
+  - RULE-SET,JP,JPSites
   - RULE-SET,Microsoft,Microsoft
   - RULE-SET,Telegram,Telegram
-  - RULE-SET,JP,JPSites
   - RULE-SET,Disney Plus,Disney
   - RULE-SET,Netflix,Netflix
   - RULE-SET,YouTube,YouTube
