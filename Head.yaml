@@ -130,7 +130,7 @@ rule-providers:
     path: ./Rules/Proxy
     interval: 86400
 
-Rule:
+rules:
   - RULE-SET,Down,DIRECT
   - RULE-SET,Domestic IPs,DIRECT
   - RULE-SET,Domestic,DIRECT
