@@ -36,7 +36,7 @@ rule-providers:
   Down:
     type: http
     behavior: classical
-    url: 'https://raw.githubusercontent.com/AnaheimEX/Clash_Rules/master/Download.yaml'
+    url: 'https://cdn.jsdelivr.net/gh/AnaheimEX/Clash_Rules@master/Download.yaml'
     path: ./Rules/Download
     interval: 86400
   Custom:
