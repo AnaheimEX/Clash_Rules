@@ -34,15 +34,60 @@ clash-for-android:
 
 proxy-providers:
   Proxy: # Provider 名称
-   type: http
-   path: ./Proxy.yaml
-   url: "https://api.dler.io/sub?target=clash&url=https%3A%2F%2Fdler.cloud%2Fsubscribe%2Fzxrs6aCtjDiIuoa5YR%3Fmu%3Dss&emoji=true&list=true&udp=false&tfo=false&scv=false&fdn=false&sort=false&match=AIA+IEPL"
-   interval: 3600
-   health-check: # 健康检查选项从此处开始
-     enable: false
-     url: http://www.gstatic.com/generate_204
-     interval: 600
-
+    type: http
+    path: ./Proxy.yaml
+    url: "https://api.dler.io/sub?target=clash&url=https%3A%2F%2Fdler.cloud%2Fsubscribe%2Fzxrs6aCtjDiIuoa5YR%3Fmu%3Dss&emoji=true&list=true&udp=false&tfo=false&scv=false&fdn=false&sort=false&match=AIA+IEPL"
+    interval: 3600
+    health-check: # 健康检查选项从此处开始
+      enable: false
+      url: http://www.gstatic.com/generate_204
+      interval: 600
+  HK:
+    type: http
+    url: "https://api.dler.io/sub?target=clash&url=https%3A%2F%2Fdler.cloud%2Fsubscribe%2Fzxrs6aCtjDiIuoa5YR%3Fmu%3Dss&emoji=true&list=true&udp=false&tfo=false&scv=false&fdn=false&sort=false&match=AIA+IEPL"
+    interval: 3600
+    path: ./hk.yaml
+    health-check:
+      enable: false
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  TW:
+    type: http
+    url: "https://api.dler.io/sub?target=clash&url=https%3A%2F%2Fdler.cloud%2Fsubscribe%2Fzxrs6aCtjDiIuoa5YR%3Fmu%3Dss&emoji=true&list=true&udp=false&tfo=false&scv=false&fdn=false&sort=false&match=AIA+IEPL"
+    interval: 3600
+    path: ./tw.yaml
+    health-check:
+      enable: false
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  SG:
+    type: http
+    url: "https://api.dler.io/sub?target=clash&url=https%3A%2F%2Fdler.cloud%2Fsubscribe%2Fzxrs6aCtjDiIuoa5YR%3Fmu%3Dss&emoji=true&list=true&udp=false&tfo=false&scv=false&fdn=false&sort=false&match=AIA+IEPL"
+    interval: 3600
+    path: ./sg.yaml
+    health-check:
+      enable: false
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  JP:
+    type: http
+    url: "https://api.dler.io/sub?target=clash&url=https%3A%2F%2Fdler.cloud%2Fsubscribe%2Fzxrs6aCtjDiIuoa5YR%3Fmu%3Dss&emoji=true&list=true&udp=false&tfo=false&scv=false&fdn=false&sort=false&match=AIA+IEPL"
+    interval: 3600
+    path: ./jp.yaml
+    health-check:
+      enable: false
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  USA:
+    type: http
+    url: "https://api.dler.io/sub?target=clash&url=https%3A%2F%2Fdler.cloud%2Fsubscribe%2Fzxrs6aCtjDiIuoa5YR%3Fmu%3Dss&emoji=true&list=true&udp=false&tfo=false&scv=false&fdn=false&sort=false&match=AIA+IEPL"
+    interval: 3600
+    path: ./usa.yaml
+    health-check:
+      enable: false
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+      
 proxy-groups: 
   - name: Proxy
     type: select
