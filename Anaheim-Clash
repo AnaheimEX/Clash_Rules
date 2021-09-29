@@ -1,21 +1,5 @@
-;用于自定义策略组的选项
-custom_proxy_group=PROXY`select``.*
-custom_proxy_group=JPSites`select`[]PROXY`(日本|JP)
-custom_proxy_group=Custom`select`[]PROXY`(台|日本|JP|TW)
-custom_proxy_group=Microsoft`select`[]DIRECT`(港|HK)
-custom_proxy_group=Netflix`select`[]PROXY`(台|新|日|TW|SG|JP)
-custom_proxy_group=Disney`select`(美|新|USA|SG)
-custom_proxy_group=YouTube`select`[]PROXY`.*
-custom_proxy_group=Telegram`select`[]PROXY`(新|港|SG|HK)
-custom_proxy_group=Steam`select`(港|HK)
-custom_proxy_group=Others`select`[]PROXY`.*
-;用于自定义策略组的选项
-
 enable_rule_generator=false
 overwrite_original_rules=false
 
 ;用于自定义基础配置的选项 会覆盖 pref.ini 里的内容
 clash_rule_base=https://raw.githubusercontent.com/AnaheimEX/Clash_Rules/master/Head.yaml
-
-;用于包含或排除节点关键词的选项 会覆盖 pref.ini 里的内容
-exclude_remarks=(AGA|NTT|PCCW|GIA|CHT|Azure|HE|剩余|过期|AWS|BGP|HKT|WTT|KDI|RT|土耳其|德国|英国|菲律宾)
