@@ -88,61 +88,14 @@ proxy-providers:
       interval: 600
       url: http://www.gstatic.com/generate_204
       
-proxy-groups: 
-- name: PROXY
-  type: select
-  use:
-    - Proxy
-      
-- name: JPSites
-  type: select
-  use:
-    - JP
-      
-- name: MS
-  type: select
-  use:
-    - HK
-  proxies:
-    - DIRECT
-      
-- name: Netflix
-  type: select
-  use:
-    - TW
-    - SG
-      
-- name: DisneyPlus
-  type: select
-  use:
-    - SG
-    - HK
-    - USA
-      
-- name: YouTube
-  type: select
-  use:
-    - HK
-      
-- name: Telegram
-  type: select
-  use:
-    - HK
-      
-- name: Steam
-  type: select
-  use:
-    - HK
-  proxies:
-    - DIRECT
-      
-- name: Others
-  type: select
-  use:
-    - Proxy
-  proxies:
-    - DIRECT
-      
+proxy-groups:      
+  - name: MS
+    type: select
+    use:
+      - HK
+    proxies:
+      - DIRECT
+     
 rule-providers:
   Down:
     type: http
