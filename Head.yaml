@@ -93,7 +93,7 @@ proxy-groups:
     type: select
     use:
       - Proxy
-  - name: JPSites
+  - name: "JPSites"
     type: select
     use:
       - JP
