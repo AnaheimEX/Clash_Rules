@@ -36,7 +36,7 @@ proxy-providers:
   Proxy: # Provider 名称
     type: http
     path: ./Proxy.yaml
-    url: "https://api.dler.io/sub?target=clash&url=https%3A%2F%2Fdler.cloud%2Fsubscribe%2Fzxrs6aCtjDiIuoa5YR%3Fmu%3Dss&emoji=true&list=true&udp=false&tfo=false&scv=false&fdn=false&sort=false&match=AIA+IEPL"
+    url: "https://dler.cloud/subscribe/zxrs6aCtjDiIuoa5YR?clash=ss&area=hk&match=aia+iepl"
     interval: 3600
     health-check: # 健康检查选项从此处开始
       enable: false
@@ -44,7 +44,7 @@ proxy-providers:
       interval: 600
   HK:
     type: http
-    url: "https://api.dler.io/sub?target=clash&url=https%3A%2F%2Fdler.cloud%2Fsubscribe%2Fzxrs6aCtjDiIuoa5YR%3Fmu%3Dss&emoji=true&list=true&udp=false&tfo=false&scv=false&fdn=false&sort=false&match=AIA+IEPL"
+    url: "https://dler.cloud/subscribe/zxrs6aCtjDiIuoa5YR?clash=ss&area=hk&match=aia+iepl"
     interval: 3600
     path: ./hk.yaml
     health-check:
