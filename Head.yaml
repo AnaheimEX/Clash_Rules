@@ -242,7 +242,7 @@ rules:
   - RULE-SET,Apple,DIRECT
   - RULE-SET,Tencent Video,DIRECT
   - RULE-SET,LAN,DIRECT
-  - RULE-SET,JP,JPSites
+#  - RULE-SET,JP,JPSites
   - RULE-SET,Microsoft,Microsoft
   - RULE-SET,Telegram,Telegram
   - RULE-SET,Disney Plus,DisneyPlus
