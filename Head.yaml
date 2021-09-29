@@ -99,7 +99,7 @@ proxy-groups:
     use:
       - JP
       
-  - name: Microsoft
+  - name: 'Microsoft'
     type: select
     use:
       - HK
