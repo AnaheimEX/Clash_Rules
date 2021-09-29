@@ -35,7 +35,7 @@ clash-for-android:
 proxy-providers:
   Proxy:
     type: http
-    url: https://dler.cloud/subscribe/zxrs6aCtjDiIuoa5YR?mu=ss&match=AIA+IEPL
+    url: “https://dler.cloud/subscribe/zxrs6aCtjDiIuoa5YR?mu=ss&match=AIA”
     interval: 3600
     path: ./hk.yaml
     health-check:
