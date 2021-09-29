@@ -32,6 +32,111 @@ clash-for-android:
   # append-system-dns: true # 追加系统 DNS 到 nameserver 
   ui-subtitle-pattern: "[\u4e00-\u9fa5]{2,4}"
 
+proxy-providers:
+  Proxy:
+    type: http
+    url: <https://dler.cloud/subscribe/zxrs6aCtjDiIuoa5YR?mu=ss&match=AIA+IEPL>
+    interval: 3600
+    path: ./hk.yaml
+    health-check:
+      enable: false
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  HK:
+    type: http
+    url: <https://dler.cloud/subscribe/zxrs6aCtjDiIuoa5YR?mu=ss&area=hk&match=AIA+IEPL>
+    interval: 3600
+    path: ./hk.yaml
+    health-check:
+      enable: false
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  TW:
+    type: http
+    url: <https://dler.cloud/subscribe/zxrs6aCtjDiIuoa5YR?mu=ss&area=tw&match=AIAL>
+    interval: 3600
+    path: ./tw.yaml
+    health-check:
+      enable: false
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  SG:
+    type: http
+    url: <https://dler.cloud/subscribe/zxrs6aCtjDiIuoa5YR?mu=ss&area=sg&match=AIA>
+    interval: 3600
+    path: ./sg.yaml
+    health-check:
+      enable: false
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  JP:
+    type: http
+    url: <https://dler.cloud/subscribe/zxrs6aCtjDiIuoa5YR?mu=ss&area=jp&match=AIA>
+    interval: 3600
+    path: ./jp.yaml
+    health-check:
+      enable: false
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  USA:
+    type: http
+    url: <https://dler.cloud/subscribe/zxrs6aCtjDiIuoa5YR?mu=ss&area=usa&match=AIA>
+    interval: 3600
+    path: ./usa.yaml
+    health-check:
+      enable: false
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+Proxy Group: 
+  - name: Proxy
+    type: select
+    use:
+      - Proxy
+  - name: JPSites
+    type: select
+    use:
+      - JP
+  - name: Custom
+    type: select
+    use:
+      - TW
+      - JP
+    proxies:
+      - DIRECT
+  - name: Microsoft
+    type: select
+    use:
+      - HK
+    proxies:
+      - DIRECT
+  - name: Netflix
+    type: select
+    use:
+      - TW
+      - SG
+  - name: DisneyPlus
+    type: select
+    use:
+      - SG
+      - HK
+      - USA
+  - name: YouTube
+    type: select
+    use:
+      - HK
+  - name: Telegram
+    type: select
+    use:
+      - HK
+    proxies:
+      - DIRECT
+  - name: Others
+    type: select
+    use:
+      - Proxy
+    proxies:
+      - DIRECT
+      
 rule-providers:
   Down:
     type: http
@@ -142,7 +247,7 @@ rules:
   - RULE-SET,JP,JPSites
   - RULE-SET,Microsoft,Microsoft
   - RULE-SET,Telegram,Telegram
-  - RULE-SET,Disney Plus,Disney
+  - RULE-SET,Disney Plus,DisneyPlus
   - RULE-SET,Netflix,Netflix
   - RULE-SET,YouTube,YouTube
   - RULE-SET,Steam,Steam
