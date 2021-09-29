@@ -88,13 +88,29 @@ proxy-providers:
       interval: 600
       url: http://www.gstatic.com/generate_204
       
-proxy-groups:
+proxy-groups: 
+  - name: Proxy
+    type: select
+    use:
+      - HK
+
   - name: MS
     type: select
     use:
       - HK
     proxies:
       - DIRECT
+
+  - name: Others
+    type: select
+    proxies:
+      - Proxy
+      - DIRECT
+      
+  - name: YouTube
+    type: select
+    use:
+      - HK
 
 rule-providers:
   Down:
