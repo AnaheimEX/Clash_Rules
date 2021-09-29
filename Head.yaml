@@ -33,7 +33,7 @@ clash-for-android:
   ui-subtitle-pattern: "[\u4e00-\u9fa5]{2,4}"
 
 proxy-providers:
-  Global: # Provider 名称
+  Proxy: # Provider 名称
     type: http
     path: ./Proxy.yaml
     url: "https://dler.cloud/subscribe/zxrs6aCtjDiIuoa5YR?clash=ss&area=hk+jp+sg+tw+usa"
@@ -89,59 +89,59 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       
 proxy groups: 
-  - name: PROXY
-    type: select
-    use:
-      - Proxy
+- name: PROXY
+  type: select
+  use:
+    - Proxy
       
-  - name: JPSites
-    type: select
-    use:
-      - JP
+- name: JPSites
+  type: select
+  use:
+    - JP
       
-  - name: "Microsoft"
-    type: select
-    use:
-      - HK
-    proxies:
-      - DIRECT
+- name: Microsoft
+  type: select
+  use:
+    - HK
+  proxies:
+    - DIRECT
       
-  - name: Netflix
-    type: select
-    use:
-      - TW
-      - SG
+- name: Netflix
+  type: select
+  use:
+    - TW
+    - SG
       
-  - name: DisneyPlus
-    type: select
-    use:
-      - SG
-      - HK
-      - USA
+- name: DisneyPlus
+  type: select
+  use:
+    - SG
+    - HK
+    - USA
       
-  - name: YouTube
-    type: select
-    use:
-      - HK
+- name: YouTube
+  type: select
+  use:
+    - HK
       
-  - name: Telegram
-    type: select
-    use:
-      - HK
+- name: Telegram
+  type: select
+  use:
+    - HK
       
-  - name: Steam
-    type: select
-    use:
-      - HK
-    proxies:
-      - DIRECT
+- name: Steam
+  type: select
+  use:
+    - HK
+  proxies:
+    - DIRECT
       
-  - name: Others
-    type: select
-    use:
-      - Proxy
-    proxies:
-      - DIRECT
+- name: Others
+  type: select
+  use:
+    - Proxy
+  proxies:
+    - DIRECT
       
 rule-providers:
   Down:
