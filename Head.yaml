@@ -89,7 +89,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
       
 proxy-groups: 
-  - name: Proxy
+  - name: PROXY
     type: select
     use:
       - HK
@@ -111,6 +111,36 @@ proxy-groups:
     type: select
     use:
       - HK
+      
+  - name: Telegram
+    type: select
+    use:
+      - SG
+      
+  - name: DisneyPlus
+    type: select
+    use:
+      - HK
+      - SG
+      - USA
+      
+  - name: Netflix
+    type: select
+    use:
+      - SG
+      - TW
+      
+  - name: Steam
+    type: select
+    use:
+      - HK
+    proxies:
+      - DIRECT
+
+  - name: JPSites
+    type: select
+    use:
+      - JP
 
 rule-providers:
   Down:
@@ -219,7 +249,7 @@ rules:
   - RULE-SET,Apple,DIRECT
   - RULE-SET,Tencent Video,DIRECT
   - RULE-SET,LAN,DIRECT
-#  - RULE-SET,JP,JPSites
+  - RULE-SET,JP,JPSites
   - RULE-SET,Microsoft,MS
   - RULE-SET,Telegram,Telegram
   - RULE-SET,Disney Plus,DisneyPlus
