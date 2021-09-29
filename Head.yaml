@@ -93,41 +93,49 @@ proxy-groups:
     type: select
     use:
       - Proxy
+      
   - name: JPSites
     type: select
     use:
       - JP
+      
   - name: Microsoft
     type: select
     use:
       - HK
     proxies:
       - DIRECT
+      
   - name: Netflix
     type: select
     use:
       - TW
       - SG
+      
   - name: DisneyPlus
     type: select
     use:
       - SG
       - HK
       - USA
+      
   - name: YouTube
     type: select
     use:
       - HK
+      
   - name: Telegram
     type: select
     use:
       - HK
+      
   - name: Steam
     type: select
     use:
       - HK
     proxies:
       - DIRECT
+      
   - name: Others
     type: select
     use:
