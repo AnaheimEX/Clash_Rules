@@ -99,7 +99,7 @@ proxy groups:
   use:
     - JP
       
-- name: Microsoft
+- name: MS
   type: select
   use:
     - HK
@@ -251,7 +251,7 @@ rules:
   - RULE-SET,Tencent Video,DIRECT
   - RULE-SET,LAN,DIRECT
 #  - RULE-SET,JP,JPSites
-  - RULE-SET,Microsoft,Microsoft
+  - RULE-SET,Microsoft,MS
   - RULE-SET,Telegram,Telegram
   - RULE-SET,Disney Plus,DisneyPlus
   - RULE-SET,Netflix,Netflix
