@@ -36,7 +36,7 @@ proxy-providers:
   Proxy: 
     type: http
     path: ./Proxy.yaml
-    url: "https://dler.cloud/subscribe/zxrs6aCtjDiIuoa5YR?clash=ss&area=hk&match=aia|iepl"
+    url: "https://dler.cloud/subscribe/zxrs6aCtjDiIuoa5YR?protocols=ss&list=clash&area=hk&match=aia|iepl"
     interval: 3600
     health-check: 
       enable: false
@@ -44,7 +44,7 @@ proxy-providers:
       interval: 600
   HK:
     type: http
-    url: "https://dler.cloud/subscribe/zxrs6aCtjDiIuoa5YR?clash=ss&area=hk&match=aia|iepl"
+    url: "https://dler.cloud/subscribe/zxrs6aCtjDiIuoa5YR?protocols=ss&list=clash&area=hk&match=aia|iepl"
     interval: 3600
     path: ./hk.yaml
     health-check:
@@ -53,7 +53,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   TW:
     type: http
-    url: "https://dler.cloud/subscribe/zxrs6aCtjDiIuoa5YR?clash=ss&area=tw&match=aia"
+    url: "https://dler.cloud/subscribe/zxrs6aCtjDiIuoa5YR?protocols=ss&list=clash&area=tw&match=aia"
     interval: 3600
     path: ./tw.yaml
     health-check:
@@ -62,7 +62,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   SG:
     type: http
-    url: "https://dler.cloud/subscribe/zxrs6aCtjDiIuoa5YR?clash=ss&area=sg&match=aia"
+    url: "https://dler.cloud/subscribe/zxrs6aCtjDiIuoa5YR?protocols=ss&list=clash&area=sg&match=aia"
     interval: 3600
     path: ./sg.yaml
     health-check:
@@ -71,7 +71,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   JP:
     type: http
-    url: "https://dler.cloud/subscribe/zxrs6aCtjDiIuoa5YR?clash=ss&area=jp&match=aia"
+    url: "https://dler.cloud/subscribe/zxrs6aCtjDiIuoa5YR?protocols=ss&list=clash&area=jp&match=aia"
     interval: 3600
     path: ./jp.yaml
     health-check:
@@ -80,7 +80,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   USA:
     type: http
-    url: "https://dler.cloud/subscribe/zxrs6aCtjDiIuoa5YR?clash=ss&area=usa&match=aia"
+    url: "https://dler.cloud/subscribe/zxrs6aCtjDiIuoa5YR?protocols=ss&list=clash&area=usa&match=aia"
     interval: 3600
     path: ./usa.yaml
     health-check:
@@ -94,17 +94,17 @@ proxy-groups:
     use:
       - Proxy
 
+  - name: Custom
+    type: select
+    use:
+      - TW
+      - JP
+
   - name: MS
     type: select
     use:
       - HK
     proxies:
-      - DIRECT
-
-  - name: Others
-    type: select
-    proxies:
-      - Proxy
       - DIRECT
       
   - name: YouTube
@@ -141,6 +141,12 @@ proxy-groups:
     type: select
     use:
       - JP
+      
+  - name: Others
+    type: select
+    proxies:
+      - Proxy
+      - DIRECT
 
 rule-providers:
   Down:
@@ -149,12 +155,12 @@ rule-providers:
     url: 'https://cdn.jsdelivr.net/gh/AnaheimEX/Clash_Rules@master/Download.yaml'
     path: ./Rules/Download
     interval: 86400
-#  Custom:
-#    type: http
-#    behavior: classical
-#    url: 'https://cdn.jsdelivr.net/gh/AnaheimEX/Clash_Rules@master/Custom.yaml'
-#    path: ./Rules/Custom
-#    interval: 86400
+  Custom:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/AnaheimEX/Clash_Rules@master/Custom.yaml'
+    path: ./Rules/Custom
+    interval: 86400
   Domestic:
     type: http
     behavior: classical
@@ -244,7 +250,7 @@ rules:
   - RULE-SET,Down,DIRECT
   - RULE-SET,Domestic IPs,DIRECT
   - RULE-SET,Domestic,DIRECT
-#  - RULE-SET,Custom,Custom
+  - RULE-SET,Custom,Custom
   - RULE-SET,Youku,DIRECT
   - RULE-SET,Apple,DIRECT
   - RULE-SET,Tencent Video,DIRECT
