@@ -42,7 +42,7 @@ proxy-providers:
       enable: false
       url: http://www.gstatic.com/generate_204
       interval: 600
-  HK:
+  HK-AIA:
     type: http
     url: "https://dler.cloud/subscribe/zxrs6aCtjDiIuoa5YR?protocols=ss&list=clash&area=hk&match=aia|iepl"
     interval: 3600
@@ -51,7 +51,7 @@ proxy-providers:
       enable: false
       interval: 600
       url: http://www.gstatic.com/generate_204
-  TW:
+  TW-AIA:
     type: http
     url: "https://dler.cloud/subscribe/zxrs6aCtjDiIuoa5YR?protocols=ss&list=clash&area=tw&match=aia"
     interval: 3600
@@ -60,7 +60,7 @@ proxy-providers:
       enable: false
       interval: 600
       url: http://www.gstatic.com/generate_204
-  SG:
+  SG-AIA:
     type: http
     url: "https://dler.cloud/subscribe/zxrs6aCtjDiIuoa5YR?protocols=ss&list=clash&area=sg&match=aia"
     interval: 3600
@@ -69,7 +69,7 @@ proxy-providers:
       enable: false
       interval: 600
       url: http://www.gstatic.com/generate_204
-  JP:
+  JP-AIA:
     type: http
     url: "https://dler.cloud/subscribe/zxrs6aCtjDiIuoa5YR?protocols=ss&list=clash&area=jp&match=aia"
     interval: 3600
@@ -78,7 +78,7 @@ proxy-providers:
       enable: false
       interval: 600
       url: http://www.gstatic.com/generate_204
-  USA:
+  USA-AIA:
     type: http
     url: "https://dler.cloud/subscribe/zxrs6aCtjDiIuoa5YR?protocols=ss&list=clash&area=us&match=aia"
     interval: 3600
@@ -97,50 +97,50 @@ proxy-groups:
   - name: Custom
     type: select
     use:
-      - TW
-      - JP
+      - TW-AIA
+      - JP-AIA
 
   - name: MS
     type: select
     use:
-      - HK
+      - HK-AIA
     proxies:
       - DIRECT
       
   - name: YouTube
     type: select
     use:
-      - HK
+      - HK-AIA
       
   - name: Telegram
     type: select
     use:
-      - SG
+      - SG-AIA
       
   - name: DisneyPlus
     type: select
     use:
-      - HK
-      - SG
-      - USA
+      - HK-AIA
+      - SG-AIA
+      - USA-AIA
       
   - name: Netflix
     type: select
     use:
-      - SG
-      - TW
+      - SG-AIA
+      - TW-AIA
       
   - name: Steam
     type: select
     use:
-      - HK
+      - HK-AIA
     proxies:
       - DIRECT
 
   - name: JPSites
     type: select
     use:
-      - JP
+      - JP-AIA
       
   - name: Others
     type: select
