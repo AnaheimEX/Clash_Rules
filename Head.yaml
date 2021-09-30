@@ -33,18 +33,18 @@ clash-for-android:
   ui-subtitle-pattern: "[\u4e00-\u9fa5]{2,4}"
 
 proxy-providers:
-  Proxy: # Provider 名称
+  Proxy: 
     type: http
     path: ./Proxy.yaml
-    url: "https://dler.cloud/subscribe/zxrs6aCtjDiIuoa5YR?clash=ss&area=hk+jp+sg+tw+usa"
+    url: "https://dler.cloud/subscribe/zxrs6aCtjDiIuoa5YR?clash=ss&area=hk&match=aia|iepl"
     interval: 3600
-    health-check: # 健康检查选项从此处开始
+    health-check: 
       enable: false
       url: http://www.gstatic.com/generate_204
       interval: 600
   HK:
     type: http
-    url: "https://dler.cloud/subscribe/zxrs6aCtjDiIuoa5YR?clash=ss&area=hk"
+    url: "https://dler.cloud/subscribe/zxrs6aCtjDiIuoa5YR?clash=ss&area=hk&match=aia|iepl"
     interval: 3600
     path: ./hk.yaml
     health-check:
@@ -92,7 +92,7 @@ proxy-groups:
   - name: PROXY
     type: select
     use:
-      - HK
+      - Proxy
 
   - name: MS
     type: select
