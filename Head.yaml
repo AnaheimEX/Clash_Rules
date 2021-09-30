@@ -80,7 +80,7 @@ proxy-providers:
       url: http://www.gstatic.com/generate_204
   USA:
     type: http
-    url: "https://dler.cloud/subscribe/zxrs6aCtjDiIuoa5YR?protocols=ss&list=clash&area=usa&match=aia"
+    url: "https://dler.cloud/subscribe/zxrs6aCtjDiIuoa5YR?protocols=ss&list=clash&area=us&match=aia"
     interval: 3600
     path: ./usa.yaml
     health-check:
