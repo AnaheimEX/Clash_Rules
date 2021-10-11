@@ -137,17 +137,17 @@ rules:
   - RULE-SET,Domestic,DIRECT
   - RULE-SET,Custom,Custom
   - RULE-SET,Youku,DIRECT
-  - RULE-SET,Apple,DIRECT
+  - RULE-SET,Apple,Apple
   - RULE-SET,Tencent Video,DIRECT
   - RULE-SET,LAN,DIRECT
   - RULE-SET,JP,JPSites
-  - RULE-SET,Microsoft,MS
+  - RULE-SET,Microsoft,Microsoft
   - RULE-SET,Telegram,Telegram
-  - RULE-SET,Disney Plus,DisneyPlus
+  - RULE-SET,Disney Plus,Disney+
   - RULE-SET,Netflix,Netflix
   - RULE-SET,YouTube,YouTube
   - RULE-SET,Steam,Steam
-  - RULE-SET,Proxy,PROXY
+  - RULE-SET,Proxy,Proxy
   - GEOIP,JP,JPSites
   - GEOIP,CN,DIRECT
   - MATCH,Others
