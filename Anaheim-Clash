@@ -1,7 +1,19 @@
+custom_proxy_group=Proxy`select`.*
+custom_proxy_group=JPSites`select`(日本|JP)
+custom_proxy_group=Custom`select`(台湾|TW)
+custom_proxy_group=Apple`select`[]DIRECT`[]Proxy
+custom_proxy_group=Netflix`select`(台湾|TW|SG|新加坡)
+custom_proxy_group=YouTube`select`[]Proxy
+custom_proxy_group=Disney+`select`[]Proxy
+custom_proxy_group=Telegram`select`(香港|HK|SG|新加坡)
+custom_proxy_group=Steam`select`[]Proxy
+custom_proxy_group=Microsoft`select`[]DIRECT`[]Proxy
+custom_proxy_group=Others`select`[]Proxy
+
 #enable_rule_generator=false
 #overwrite_original_rules=false
 
 ;用于自定义基础配置的选项 会覆盖 pref.ini 里的内容
 clash_rule_base=https://raw.githubusercontent.com/AnaheimEX/Clash_Rules/master/Head.yaml
 
-include_remarks=AIA|IEPL
+include_remarks=V2|V3|日本|美国|新加坡|香港|台湾
