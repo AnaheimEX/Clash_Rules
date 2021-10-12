@@ -1,0 +1,265 @@
+port: 8888
+socks-port: 8889
+mixed-port: 8899
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: '127.0.0.1:6170'
+experimental:
+  ignore-resolve-fail: true
+dns:
+  enable: true
+  ipv6: false
+  listen: '0.0.0.0:5450'
+  enhanced-mode: fake-ip
+  default-nameserver:
+    - 119.29.29.29
+    - 223.5.5.5
+    - 223.6.6.6
+  fake-ip-filter:
+    - '*.lan'
+    - '*.edu.cn'
+    - localhost.ptlogin2.qq.com
+    - '*.*.*.srv.nintendo.net'
+    - '*.*.stun.playstation.net'
+    - xbox.*.*.microsoft.com
+    - '*.*.xboxlive.com'
+    - '*.msftncsi.com'
+    - 'www.msftconnecttest.com'
+  nameserver:
+    - 'https://doh.pub/dns-query'
+clash-for-android: 
+  # append-system-dns: true # 追加系统 DNS 到 nameserver 
+  ui-subtitle-pattern: "[\u4e00-\u9fa5]{2,4}"
+
+# Clash 配置格式
+
+proxy-groups:
+  - name: Proxy
+    type: select
+    use:
+      - All
+    proxies:
+      - Proxy
+      - DIRECT
+      
+  - name: JPSites
+    type: select
+    use:
+      - JP
+    proxies:
+      - Proxy
+      - DIRECT
+
+  - name: Custom
+    type: select
+    use:
+      - JP
+    proxies:
+      - Proxy
+      - DIRECT
+
+  - name: Apple
+    type: select
+    use:
+      - JP
+    proxies:
+      - Proxy
+      - DIRECT
+
+  - name: Netflix
+    type: select
+    use:
+      - JP
+    proxies:
+      - Proxy
+      - DIRECT
+
+- name: YouTube
+    type: select
+    use:
+      - JP
+    proxies:
+      - Proxy
+      - DIRECT
+
+  - name: Disney
+    type: select
+    use:
+      - JP
+    proxies:
+      - Proxy
+      - DIRECT
+
+  - name: Telegram
+    type: select
+    use:
+      - JP
+    proxies:
+      - Proxy
+      - DIRECT
+
+  - name: Steam
+    type: select
+    use:
+      - JP
+    proxies:
+      - Proxy
+      - DIRECT
+
+  - name: Microsoft
+    type: select
+    use:
+      - JP
+    proxies:
+      - Proxy
+      - DIRECT
+
+- name: Others
+    type: select
+    use:
+      - JP
+    proxies:
+      - Proxy
+      - DIRECT
+
+proxy-providers:
+  All:
+    type: http
+    url: https://proxy-provider-converter.vercel.app/api/convert?url=https%3A%2F%2Fapi.fuqing.ch%2Fsub%3Ftarget%3Dclash%26new_name%3Dtrue%26emoji%3Dtrue%26url%3Dhttps%253A%252F%252Ffuqing.li%252Fmodules%252Fservers%252Ffuqingsocks%252Fosubscribe.php%253Fsid%253D93%2526token%253DtTq3KwKi4yMl%2526sip002%253D1&target=clash
+    interval: 3600
+    path: ./api.fuqing.ch.yaml
+    health-check:
+      enable: true
+      interval: 600
+      # lazy: true
+      url: http://www.gstatic.com/generate_204
+  JP:
+    type: http
+    url: https://proxy-provider-converter.vercel.app/api/convert?url=https%3A%2F%2Fapi.fuqing.ch%2Fsub%3Ftarget%3Dclash%26new_name%3Dtrue%26emoji%3Dtrue%26url%3Dhttps%253A%252F%252Ffuqing.li%252Fmodules%252Fservers%252Ffuqingsocks%252Fosubscribe.php%253Fsid%253D93%2526token%253DtTq3KwKi4yMl%2526sip002%253D1&target=clash&area=JP
+    interval: 3600
+    path: ./api.fuqing.ch.yaml
+    health-check:
+      enable: true
+      interval: 600
+      # lazy: true
+      url: http://www.gstatic.com/generate_204
+      
+rule-providers:
+  Down:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/AnaheimEX/Clash_Rules@master/Download.yaml'
+    path: ./Rules/Download
+    interval: 86400
+  Custom:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/AnaheimEX/Clash_Rules@master/Custom.yaml'
+    path: ./Rules/Custom
+    interval: 86400
+  Domestic:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Domestic.yaml'
+    path: ./Rules/Domestic
+    interval: 86400
+  Domestic IPs:
+    type: http
+    behavior: ipcidr
+    url: 'https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Domestic%20IPs.yaml'
+    path: .Rules/Domestic IPs
+    interval: 86400
+  Youku:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/Youku.yaml'
+    path: .Rules/Media/Youku
+    interval: 86400
+  Apple:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/AnaheimEX/Clash_Rules@master/Apple.yaml'
+    path: .Rules/Apple
+    interval: 86400 
+  Tencent Video:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/Tencent%20Video.yaml'
+    path: ./Rules/Media/Tencent Video
+    interval: 86400
+  LAN:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/LAN.yaml'
+    path: ./Rules/LAN
+    interval: 86400
+  JP:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/AnaheimEX/Clash_Rules@master/JPSites.yaml'
+    path: ./Rules/JPSites
+    interval: 86400
+  Steam:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/AnaheimEX/Clash_Rules@master/Steam.yaml'
+    path: ./Rules/Steam
+    interval: 86400
+  YouTube:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/YouTube.yaml'
+    path: ./Rules/Media/YouTube
+    interval: 86400
+  Netflix:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/Netflix.yaml'
+    path: ./Rules/Media.Netflix
+    interval: 86400
+  Disney Plus:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/Disney%20Plus.yaml'
+    path: ./Rules/Media/Disney Plus
+    interval: 86400
+  Telegram:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Telegram.yaml'
+    path: ./Rules/Telegram
+    interval: 86400
+  Microsoft:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Microsoft.yaml'
+    path: ./Rules/Microsoft
+    interval: 86400
+  Proxy:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Proxy.yaml'
+    path: ./Rules/Proxy
+    interval: 86400
+
+rules:
+  - RULE-SET,Down,DIRECT
+  - RULE-SET,Domestic IPs,DIRECT
+  - RULE-SET,Domestic,DIRECT
+  - RULE-SET,Custom,Custom
+  - RULE-SET,Youku,DIRECT
+  - RULE-SET,Apple,Apple
+  - RULE-SET,Tencent Video,DIRECT
+  - RULE-SET,LAN,DIRECT
+  - RULE-SET,JP,JPSites
+  - RULE-SET,Microsoft,Microsoft
+  - RULE-SET,Telegram,Telegram
+  - RULE-SET,Disney Plus,Disney+
+  - RULE-SET,Netflix,Netflix
+  - RULE-SET,YouTube,YouTube
+  - RULE-SET,Steam,Steam
+  - RULE-SET,Proxy,Proxy
+  - GEOIP,JP,JPSites
+  - GEOIP,CN,DIRECT
+  - MATCH,Others
