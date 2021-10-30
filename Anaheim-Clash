@@ -16,4 +16,4 @@ overwrite_original_rules=false
 ;用于自定义基础配置的选项 会覆盖 pref.ini 里的内容
 clash_rule_base=https://raw.githubusercontent.com/AnaheimEX/Clash_Rules/master/Head.yaml
 
-exclude_remarks=俄罗斯|德国|韩国|美国|英国|HKT|NTT|BGP|5G|HINET|CHT|KDDI|WTT
+exclude_remarks=菲律宾|澳大利亚|加拿大|印度|巴西|俄罗斯|德国|韩国|美国|英国|HKT|NTT|BGP|5G|HINET|CHT|KDDI|WTT
