@@ -3,12 +3,12 @@ custom_proxy_group=JPSites`select`(日本|JP)
 custom_proxy_group=Custom`select`(台湾|TW)
 custom_proxy_group=Apple`select`[]DIRECT`[]Proxy
 custom_proxy_group=Netflix`select`(台湾|TW|SG|新加坡)
-custom_proxy_group=YouTube`select`[]Proxy
-custom_proxy_group=Disney+`select`[]Proxy
-custom_proxy_group=Telegram`select`(香港|HK|SG|新加坡)
-custom_proxy_group=Steam`select`[]Proxy
-custom_proxy_group=Microsoft`select`[]DIRECT`[]Proxy
-custom_proxy_group=Others`select`[]Proxy
+custom_proxy_group=YouTube`select`[]Proxy`(日本)
+custom_proxy_group=Disney+`select`(香港|HK|SG|新加坡)
+custom_proxy_group=Telegram`select`(香港|HK|SG|新加坡|日本)
+custom_proxy_group=Steam`select`(香港|HK|SG|新加坡|日本)
+custom_proxy_group=Microsoft`select`[]DIRECT`(香港|HK|SG|新加坡)
+custom_proxy_group=Others`select`.*
 
 enable_rule_generator=false
 overwrite_original_rules=false
@@ -16,4 +16,4 @@ overwrite_original_rules=false
 ;用于自定义基础配置的选项 会覆盖 pref.ini 里的内容
 clash_rule_base=https://raw.githubusercontent.com/AnaheimEX/Clash_Rules/master/Head.yaml
 
-exclude_remarks=菲律宾|澳大利亚|加拿大|印度|巴西|俄罗斯|德国|韩国|美国|英国|HKT|NTT|BGP|5G|HINET|CHT|KDDI|WTT
+exclude_remarks=V1|V2|墨西哥|悉尼|印尼|菲律宾|澳大利亚|加拿大|印度|巴西|俄罗斯|德国|韩国|美国|英国|HKT|NTT|BGP|5G|HINET|CHT|KDDI|WTT
