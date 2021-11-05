@@ -18,6 +18,9 @@ payload:
 # 360
 # Tencent Weiyun
   - PROCESS-NAME,Weiyun
-# > S1
+# S1
   - DOMAIN-SUFFIX,stage3rd.com
   - DOMAIN-SUFFIX,saraba1st.com
+
+# SteamDownload
+  - DOMAIN-SUFFIX,steampowered.com
