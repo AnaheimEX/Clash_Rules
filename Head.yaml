@@ -7,32 +7,20 @@ log-level: info
 external-controller: '127.0.0.1:6170'
 experimental:
   ignore-resolve-fail: true
-dns:
-  enable: true
-  ipv6: false
-  listen: '0.0.0.0:5450'
-  enhanced-mode: fake-ip
-  default-nameserver:
-    - 119.29.29.29
-    - 223.5.5.5
-    - 223.6.6.6
-  fake-ip-filter:
-    - '*.lan'
-    - '*.edu.cn'
-    - localhost.ptlogin2.qq.com
-    - '*.*.*.srv.nintendo.net'
-    - '*.*.stun.playstation.net'
-    - xbox.*.*.microsoft.com
-    - '*.*.xboxlive.com'
-    - '*.msftncsi.com'
-    - 'www.msftconnecttest.com'
-  nameserver:
-    - 'https://doh.pub/dns-query'
-clash-for-android: 
-  # append-system-dns: true # 追加系统 DNS 到 nameserver 
-  ui-subtitle-pattern: "[\u4e00-\u9fa5]{2,4}"
+mixin:
+  dns:
+    enable: true
+    enhanced-mode: fake-ip
+    nameserver:
+      - 223.6.6.6
+  tun:
+    enable: true
+    stack: gvisor # 使用 system 需要 Clash Premium 2021.05.08 及更高版本
+    dns-hijack:
+      - 198.18.0.2:53 # 请勿更改
+  auto-route: true
+  auto-detect-interface: true # 自动检测出口网卡
   
-
 rule-providers:
   Down:
     type: http
