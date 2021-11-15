@@ -7,72 +7,115 @@ log-level: info
 external-controller: '127.0.0.1:6170'
 experimental:
   ignore-resolve-fail: true
-mixin: # object
-  tun:
-    enable: true
-    stack: system
-    dns-hijack:
-      - 198.18.0.2:53 # when fake-ip-range is 198.18.0.1/16, should hijack 198.18.0.2:53
-    macOS-auto-route: true # auto set global route for Windows
-    macOS-auto-detect-interface: true # auto detect interface, conflict with interface-name
-  # interface-name: WLAN
+mixin:
   dns:
     enable: true
-    # listen: 0.0.0.0:53
-    ipv6: true
+    enhanced-mode: fake-ip
     default-nameserver:
       - 114.114.114.114
-      - 8.8.8.8
-    enhanced-mode: fake-ip #redir-host or fake-ip
-    # fake-ip-range: 198.18.0.1/16 # Fake IP addresses pool CIDR
-    fake-ip-filter:
-        - "*.lan"
-        - stun.*.*.*
-        - stun.*.*
-        - music.163.com
-        - "*.music.163.com"
-        - "*.126.net"
-        - musicapi.taihe.com
-        - music.taihe.com
-        - songsearch.kugou.com
-        - trackercdn.kugou.com
-        - "*.kuwo.cn"
-        - api-jooxtt.sanook.com
-        - api.joox.com
-        - joox.com
-        - y.qq.com
-        - "*.y.qq.com"
-        - streamoc.music.tc.qq.com
-        - mobileoc.music.tc.qq.com
-        - isure.stream.qqmusic.qq.com
-        - dl.stream.qqmusic.qq.com
-        - aqqmusic.tc.qq.com
-        - amobile.music.tc.qq.com
-        - "*.xiami.com"
-        - "*.music.migu.cn"
-        - music.migu.cn
-        - "*.msftconnecttest.com"
-        - "*.msftncsi.com"
-        - localhost.ptlogin2.qq.com
-        - "*.*.*.srv.nintendo.net"
-        - "*.*.stun.playstation.net"
-        - xbox.*.*.microsoft.com
-        - "*.ipv6.microsoft.com"
-        - "*.*.xboxlive.com"
-        - speedtest.cros.wr.pvp.net
-    nameserver:
       - 223.5.5.5
-      - 119.29.29.29
-      - tls://dns.rubyfish.cn:853 # DNS over TLS
-      - https://1.1.1.1/dns-query # DNS over HTTPS
+    fake-ip-range: 198.18.0.1/16
+    fake-ip-filter:
+      # --- LAN ---
+      - '*.lan'
+      # --- Linksys Wireless Router ---
+      - '*.linksys.com'
+      - '*.linksyssmartwifi.com'
+      # --- Apple Software Update Service ---
+      - 'swscan.apple.com'
+      - 'mesu.apple.com'
+      # --- Microsoft Connnect Detection ---
+      - '*.msftconnecttest.com'
+      - '*.msftncsi.com'
+      # --- NTP Service ---
+      - 'time.*.com'
+      - 'time.*.gov'
+      - 'time.*.edu.cn'
+      - 'time.*.apple.com'
+
+      - 'time1.*.com'
+      - 'time2.*.com'
+      - 'time3.*.com'
+      - 'time4.*.com'
+      - 'time5.*.com'
+      - 'time6.*.com'
+      - 'time7.*.com'
+
+      - 'ntp.*.com'
+      - 'ntp.*.com'
+      - 'ntp1.*.com'
+      - 'ntp2.*.com'
+      - 'ntp3.*.com'
+      - 'ntp4.*.com'
+      - 'ntp5.*.com'
+      - 'ntp6.*.com'
+      - 'ntp7.*.com'
+
+      - '*.time.edu.cn'
+      - '*.ntp.org.cn'
+      - '+.pool.ntp.org'
+
+      - 'time1.cloud.tencent.com'
+      # --- NetEase Service ---
+      ## NetEase
+      - '+.music.163.com'
+      - '*.126.net'
+      ## Baidu
+      - 'musicapi.taihe.com'
+      - 'music.taihe.com'
+      ## Kugou
+      - 'songsearch.kugou.com'
+      - 'trackercdn.kugou.com'
+      ## Kuwo
+      - '*.kuwo.cn'
+      ## JOOX
+      - 'api-jooxtt.sanook.com'
+      - 'api.joox.com'
+      - 'joox.com'
+      ## QQ
+      - '+.y.qq.com'
+      - '+.music.tc.qq.com'
+      - 'aqqmusic.tc.qq.com'
+      - '+.stream.qqmusic.qq.com'
+      ## Xiami
+      - '*.xiami.com'
+      ## Migu
+      - '+.music.migu.cn'
+      # --- Game Service ---
+      ## Nintendo Switch
+      - '+.srv.nintendo.net'
+      ## Sony PlayStation
+      - '+.stun.playstation.net'
+      ## Microsoft Xbox
+      - 'xbox.*.microsoft.com'
+      - '+.xboxlive.com'
+      # --- Other ---
+      ## QQ Quick Login
+      - 'localhost.ptlogin2.qq.com'
+      ## Golang
+      - 'proxy.golang.org'
+      ## STUN Server
+      - 'stun.*.*'
+      - 'stun.*.*.*'
+    nameserver:
+      - https://doh.pub/dns-query
+      - https://dns.alidns.com/dns-query
+    fallback:
+      - tls://1.1.1.1:853
+      - tls://dns.google:853
     fallback-filter:
       geoip: true
       ipcidr:
-        # - 240.0.0.0/4
-      # domain:
-      #   - '+.google.com'
-      #   - '+.facebook.com'
-      #   - '+.youtube.com'
+        - 240.0.0.0/4
+        - 0.0.0.0/32
+
+  tun:
+    enable: true
+    stack: gvisor
+    dns-hijack:
+      - 198.18.0.2:53
+    auto-route: true
+    auto-detect-interface: true
 
 rule-providers:
   Down:
