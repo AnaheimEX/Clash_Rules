@@ -6,7 +6,7 @@ custom_proxy_group=Netflix`select`(台湾|TW|SG|新加坡)
 custom_proxy_group=YouTube`select`[]Proxy`(日本)
 custom_proxy_group=Disney+`select`(香港|HK|SG|新加坡)
 custom_proxy_group=Telegram`select`(香港|HK|SG|新加坡|日本)
-custom_proxy_group=Steam`select`(香港|HK|SG|新加坡|日本)
+custom_proxy_group=Steam`select`[]DIRECT`(香港|HK|日本)
 custom_proxy_group=Microsoft`select`[]DIRECT`(香港|HK|SG|新加坡)
 custom_proxy_group=Others`select`.*
 
