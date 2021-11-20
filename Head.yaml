@@ -7,7 +7,21 @@ log-level: info
 external-controller: '127.0.0.1:6170'
 experimental:
   ignore-resolve-fail: true
-  
+dns:
+  enable: true
+  enhanced-mode: fake-ip
+  nameserver:
+    - 8.8.8.8 # 真实请求DNS，可多设置几个
+    - 114.114.114.114
+# interface-name: WLAN # 出口网卡名称，或者使用下方的自动检测
+tun:
+  enable: true
+  stack: gvisor # 使用 system 需要 Clash Premium 2021.05.08 及更高版本
+  dns-hijack:
+    - 198.18.0.2:53 # 请勿更改
+  auto-route: true
+  auto-detect-interface: true # 自动检测出口网卡  
+ 
 rule-providers:
   Down:
     type: http
