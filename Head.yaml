@@ -13,6 +13,10 @@ dns:
   nameserver:
     - 8.8.8.8 # 真实请求DNS，可多设置几个
     - 114.114.114.114
+  fake-ip-filter:
+    - "dns.msftncsi.com"
+    - "www.msftncsi.com"
+    - "www.msftconnecttest.com"
 # interface-name: WLAN # 出口网卡名称，或者使用下方的自动检测
 tun:
   enable: true
