@@ -19,13 +19,6 @@ dns:
     - "www.msftconnecttest.com"
     # --- LAN ---
     - '*.lan'
-    ## QQ
-    - '+.y.qq.com'
-    - '+.music.tc.qq.com'
-    - 'aqqmusic.tc.qq.com'
-    - '+.stream.qqmusic.qq.com'
-    ## QQ Quick Login
-    - 'localhost.ptlogin2.qq.com'
 # interface-name: WLAN # 出口网卡名称，或者使用下方的自动检测
 tun:
   enable: true
