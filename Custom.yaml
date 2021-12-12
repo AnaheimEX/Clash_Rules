@@ -3,6 +3,11 @@ payload:
   - DOMAIN-SUFFIX,manhuagui.com
   - DOMAIN-SUFFIX,hamreus.com
 
+# > ToTheGlory
+  - DOMAIN-SUFFIX,totheglory.im
+  - DOMAIN,totheglory.im
+  - DOMAIN-KEYWORD,totheglory
+  
 # > Logitechg
   - DOMAIN-SUFFIX,logitechg.com
   - DOMAIN-KEYWORD,logitech
