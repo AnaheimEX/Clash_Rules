@@ -108,8 +108,6 @@ rule-providers:
 
 rules:
   - RULE-SET,Down,DIRECT
-  - RULE-SET,Domestic IPs,DIRECT
-  - RULE-SET,Domestic,DIRECT
   - RULE-SET,Custom,Custom
   - RULE-SET,Youku,DIRECT
   - RULE-SET,Apple,Apple
@@ -123,6 +121,8 @@ rules:
   - RULE-SET,YouTube,YouTube
   - RULE-SET,Steam,Steam
   - RULE-SET,Proxy,Proxy
+  - RULE-SET,Domestic IPs,DIRECT
+  - RULE-SET,Domestic,DIRECT
   - GEOIP,JP,JPSites
   - GEOIP,CN,DIRECT
   - MATCH,Others
