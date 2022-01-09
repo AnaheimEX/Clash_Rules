@@ -1,0 +1,7 @@
+enable_rule_generator=false
+overwrite_original_rules=false
+
+;用于自定义基础配置的选项 会覆盖 pref.ini 里的内容
+clash_rule_base=https://raw.githubusercontent.com/AnaheimEX/Clash_Rules/master/Head_new.yaml
+
+include_remarks=IEPL|IPLC|AIA|HC
