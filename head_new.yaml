@@ -8,6 +8,41 @@ external-controller: '127.0.0.1:6170'
 experimental:
   ignore-resolve-fail: true
   
+# proxy-provider
+proxy-provider:
+  TW:
+    type: http
+    path: ./tw.yaml
+    url: https://dler.cloud/subscribe/zxrs6aCtjDiIuoa5YR?protocols=ss&list=clash&area=tw&match=BGP
+    interval: 3600
+    health-check:
+        enable: false
+        url: http://www.gstatic.com/generate_204
+        interval: 300
+  HK:
+    type: http
+    path: ./us.yaml
+    url: https://dler.cloud/subscribe/zxrs6aCtjDiIuoa5YR?protocols=ss&list=clash&area=hk&match=HC
+    interval: 3600
+    health-check:
+        enable: false
+        url: http://www.gstatic.com/generate_204
+        interval: 300
+
+
+# 在 Proxy Group 中 🎬 HKMTMedia 组和 💰️PayPal 中引入 provider
+Proxy Group:
+  - name: Telegram
+    type: select
+    proxies:
+      - DIRECT
+    use:
+    	- HK
+  - name: Steam
+    type: select
+    use:
+      - DIRECT
+  
 rule-providers:
   Down:
     type: http
