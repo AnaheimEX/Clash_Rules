@@ -1,0 +1,128 @@
+port: 8888
+socks-port: 8889
+mixed-port: 8899
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: '127.0.0.1:6170'
+experimental:
+  ignore-resolve-fail: true
+  
+rule-providers:
+  Down:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/AnaheimEX/Clash_Rules@master/Download.yaml'
+    path: ./Rules/Download
+    interval: 86400
+  Custom:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/AnaheimEX/Clash_Rules@master/Custom.yaml'
+    path: ./Rules/Custom
+    interval: 86400
+  Domestic:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Domestic.yaml'
+    path: ./Rules/Domestic
+    interval: 86400
+  Domestic IPs:
+    type: http
+    behavior: ipcidr
+    url: 'https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Domestic%20IPs.yaml'
+    path: .Rules/Domestic IPs
+    interval: 86400
+  Youku:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/Youku.yaml'
+    path: .Rules/Media/Youku
+    interval: 86400
+  Apple:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/AnaheimEX/Clash_Rules@master/Apple.yaml'
+    path: .Rules/Apple
+    interval: 86400 
+  Tencent Video:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/Tencent%20Video.yaml'
+    path: ./Rules/Media/Tencent Video
+    interval: 86400
+  LAN:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/LAN.yaml'
+    path: ./Rules/LAN
+    interval: 86400
+  JP:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/AnaheimEX/Clash_Rules@master/JPSites.yaml'
+    path: ./Rules/JPSites
+    interval: 86400
+  Steam:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/AnaheimEX/Clash_Rules@master/Steam.yaml'
+    path: ./Rules/Steam
+    interval: 86400
+  YouTube:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/YouTube.yaml'
+    path: ./Rules/Media/YouTube
+    interval: 86400
+  Netflix:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/Netflix.yaml'
+    path: ./Rules/Media.Netflix
+    interval: 86400
+  Disney Plus:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Media/Disney%20Plus.yaml'
+    path: ./Rules/Media/Disney Plus
+    interval: 86400
+  Telegram:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Telegram.yaml'
+    path: ./Rules/Telegram
+    interval: 86400
+  Microsoft:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Microsoft.yaml'
+    path: ./Rules/Microsoft
+    interval: 86400
+  Proxy:
+    type: http
+    behavior: classical
+    url: 'https://cdn.jsdelivr.net/gh/lhie1/Rules@master/Clash/Provider/Proxy.yaml'
+    path: ./Rules/Proxy
+    interval: 86400
+
+rules:
+  - RULE-SET,Down,DIRECT
+  - RULE-SET,Custom,Custom
+  - RULE-SET,Youku,DIRECT
+  - RULE-SET,Apple,Apple
+  - RULE-SET,Tencent Video,DIRECT
+  - RULE-SET,LAN,DIRECT
+  - RULE-SET,JP,JPSites
+  - RULE-SET,Microsoft,Microsoft
+  - RULE-SET,Telegram,Telegram
+  - RULE-SET,Disney Plus,Disney+
+  - RULE-SET,Netflix,Netflix
+  - RULE-SET,YouTube,YouTube
+  - RULE-SET,Steam,Steam
+  - RULE-SET,Proxy,Proxy
+  - RULE-SET,Domestic IPs,DIRECT
+  - RULE-SET,Domestic,DIRECT
+  - GEOIP,JP,JPSites
+  - GEOIP,CN,DIRECT
+  - MATCH,Others
