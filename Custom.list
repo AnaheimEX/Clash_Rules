@@ -1,0 +1,25 @@
+# > Manhuagui
+DOMAIN-SUFFIX,manhuagui.com
+DOMAIN-SUFFIX,hamreus.com
+
+# > ToTheGlory
+DOMAIN-SUFFIX,totheglory.im
+DOMAIN,totheglory.im
+DOMAIN-KEYWORD,totheglory
+  
+# > Logitechg
+DOMAIN-SUFFIX,logitechg.com
+DOMAIN-KEYWORD,logitech
+DOMAIN-SUFFIX,logitech.com
+
+# > Notion
+DOMAIN-SUFFIX,loggly.com
+DOMAIN-SUFFIX,segment.com
+DOMAIN-SUFFIX,intercom.io
+DOMAIN-SUFFIX,intercomcdn.com
+DOMAIN-SUFFIX,amplitude.com
+DOMAIN-SUFFIX,notion.so
+DOMAIN-KEYWORD,notion
+DOMAIN-KEYWORD,segment
+DOMAIN-KEYWORD,intercomcdn
+DOMAIN-SUFFIX,amazonaws.com
