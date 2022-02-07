@@ -15,7 +15,6 @@ ruleset=Steam,https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%2
 ruleset=Epic,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Epic.list
 ruleset=Telegram,https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/Telegram.list
 ruleset=Proxy,https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/Proxy.list
-ruleset=JPSites,[]GEOIP,JP
 ruleset=DIRECT,[]GEOIP,CN
 ruleset=Others,[]FINAL
 
@@ -25,12 +24,12 @@ custom_proxy_group=Custom`select`(台湾|TW|日本|JP|SG|新加坡)
 custom_proxy_group=EHentai`select`.*
 custom_proxy_group=Apple`select`[]DIRECT`[]Proxy
 custom_proxy_group=Netflix`select`(台湾|TW|SG|新加坡)
-custom_proxy_group=YouTube`select`[]Proxy`(香港|HK)
+custom_proxy_group=YouTube`select`[]Proxy`.*
 custom_proxy_group=Disney+`select`(香港|HK|SG|新加坡)
 custom_proxy_group=Telegram`select`(SG|新加坡|日本)
-custom_proxy_group=Steam`select`[]DIRECT`(香港|HK)
+custom_proxy_group=Steam`select`[]DIRECT`[]Proxy
 custom_proxy_group=Epic`select`[]DIRECT`(香港|HK)
-custom_proxy_group=Microsoft`select`[]DIRECT`(香港|HK)
+custom_proxy_group=Microsoft`select`[]DIRECT`[]Proxy
 custom_proxy_group=Others`select`.*
 
 enable_rule_generator=false
