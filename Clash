@@ -1,8 +1,8 @@
-ruleset=DIRECT,https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/Domestic%20IPs.list
-ruleset=DIRECT,https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/Domestic.list
-ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list
-ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list
-ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+;ruleset=DIRECT,https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/Domestic%20IPs.list
+;ruleset=DIRECT,https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/Domestic.list
+;ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list
+;ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaMedia.list
+;ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
 ruleset=Custom,https://raw.githubusercontent.com/AnaheimEX/Clash_Rules/master/Custom.list
 ruleset=JP,https://raw.githubusercontent.com/AnaheimEX/Clash_Rules/master/JPSites.list
 ruleset=EHentai,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/EHGallery.list
@@ -15,7 +15,7 @@ ruleset=Steam,https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%2
 ruleset=Epic,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Epic.list
 ruleset=Telegram,https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/Telegram.list
 ruleset=Proxy,https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/Proxy.list
-ruleset=DIRECT,[]GEOIP,CN
+ruleset=Domestic,[]GEOIP,CN
 ruleset=Others,[]FINAL
 
 custom_proxy_group=Proxy`select`.*
@@ -31,6 +31,7 @@ custom_proxy_group=Steam`select`[]DIRECT`[]Proxy
 custom_proxy_group=Epic`select`[]DIRECT`(香港|HK)
 custom_proxy_group=Microsoft`select`[]DIRECT`[]Proxy
 custom_proxy_group=Others`select`.*
+custom_proxy_group=Domestic`select`[]DIRECT
 
 enable_rule_generator=false
 overwrite_original_rules=false
