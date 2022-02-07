@@ -39,4 +39,4 @@ overwrite_original_rules=false
 ;用于自定义基础配置的选项 会覆盖 pref.ini 里的内容
 clash_rule_base=https://raw.githubusercontent.com/AnaheimEX/Clash_Rules/master/clash_head_new.yaml
 
-include_remarks=IEPL|IPLC|AIA|HC|BGP|香港|HK|日本|JP|新加坡|SG|台湾|TW|
+include_remarks=IEPL|IPLC|AIA|HC
