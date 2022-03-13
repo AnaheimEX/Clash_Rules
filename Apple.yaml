@@ -1,6 +1,0 @@
-payload:  
-# > Apple
-  - DOMAIN-SUFFIX,apple.com.cn
-  - DOMAIN,xp.apple.com.cn
-  - DOMAIN,secure4.www.apple.com.cn
-  - DOMAIN,securemvt.apple.com.cn
