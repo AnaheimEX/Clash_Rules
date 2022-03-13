@@ -19,7 +19,7 @@ ruleset=DIRECT,[]GEOIP,CN
 ruleset=Others,[]FINAL
 
 custom_proxy_group=Proxy`select`.*
-custom_proxy_group=JPSites`select`(日本|JP)
+custom_proxy_group=JPSites`select`(日本|JP|香港|HK)
 custom_proxy_group=Custom`select`(台湾|TW|日本|JP|SG|新加坡)
 custom_proxy_group=EHentai`select`.*
 custom_proxy_group=Apple`select`[]DIRECT`[]Proxy
