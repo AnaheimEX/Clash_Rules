@@ -16,11 +16,12 @@ ruleset=Epic,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Rule
 ruleset=Telegram,https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/Telegram.list
 ruleset=Proxy,https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/Proxy.list
 ruleset=DIRECT,[]GEOIP,CN
+releset=JPSites,[]GEOIP,JP
 ruleset=Others,[]FINAL
 
 custom_proxy_group=Proxy`select`.*
-custom_proxy_group=JPSites`select`(日本|JP|香港|HK)
-custom_proxy_group=Custom`select`(台湾|TW|日本|JP|SG|新加坡)
+custom_proxy_group=JPSites`select`(日本|JP)
+custom_proxy_group=Custom`select`.*
 custom_proxy_group=EHentai`select`.*
 custom_proxy_group=Apple`select`[]DIRECT`[]Proxy
 custom_proxy_group=Netflix`select`(台湾|TW|SG|新加坡)
