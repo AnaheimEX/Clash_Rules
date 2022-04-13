@@ -20,7 +20,7 @@ releset=JPSites,[]GEOIP,JP
 ruleset=Others,[]FINAL
 
 custom_proxy_group=Proxy`select`.*
-custom_proxy_group=JPSites`select`(日本|JP)
+custom_proxy_group=JPSites`select`(日本|JP|HK|香港)
 custom_proxy_group=Custom`select`.*
 custom_proxy_group=EHentai`select`.*
 custom_proxy_group=Apple`select`[]DIRECT`[]Proxy
@@ -28,15 +28,14 @@ custom_proxy_group=Netflix`select`(台湾|TW|SG|新加坡)
 custom_proxy_group=YouTube`select`[]Proxy`.*
 custom_proxy_group=Disney+`select`(香港|HK|SG|新加坡)
 custom_proxy_group=Telegram`select`(SG|新加坡|日本)
-custom_proxy_group=Steam`select`[]DIRECT`[]Proxy
+custom_proxy_group=Steam`select`[]DIRECT`.*
 custom_proxy_group=Epic`select`[]DIRECT`[]Proxy
 custom_proxy_group=Microsoft`select`[]DIRECT`[]Proxy
 custom_proxy_group=Others`select`[]Proxy`.*
 
 enable_rule_generator=true
 overwrite_original_rules=true
-
 ;用于自定义基础配置的选项 会覆盖 pref.ini 里的内容
 clash_rule_base=https://raw.githubusercontent.com/AnaheimEX/Clash_Rules/master/clash_head_new.yaml
 
-include_remarks=IEPL|IPLC|AIA|HC|韩国|日本
+include_remarks=IEPL|IPLC|AIA|HC|韩国|日本|美国
