@@ -24,7 +24,7 @@ ruleset=DIRECT,[]GEOIP,CN
 releset=JPSites,[]GEOIP,JP
 ruleset=Others,[]FINAL
 
-custom_proxy_group=Proxy`select`.*
+custom_proxy_group=Proxy`select`[]🇭🇰 HK`[]🇨🇳 TW`[]🇯🇵 JP`[]🇸🇬 SG`[]🇺🇲 US
 custom_proxy_group=JPSites`select`[]🇭🇰 HK`[]🇯🇵 JP
 custom_proxy_group=Custom`select`[]🇨🇳 TW`[]🇯🇵 JP`[]🇸🇬 SG`[]🇺🇲 US
 custom_proxy_group=EHentai`select`[]🇭🇰 HK`[]🇨🇳 TW`[]🇯🇵 JP`[]🇸🇬 SG`[]🇺🇲 US
