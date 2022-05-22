@@ -18,3 +18,7 @@ DOMAIN-KEYWORD,notion
 DOMAIN-KEYWORD,segment
 DOMAIN-KEYWORD,intercomcdn
 DOMAIN-SUFFIX,amazonaws.com
+
+# > ToTheGlory
+DOMAIN-SUFFIX,totheglory.im
+DOMAIN-KEYWORD,totheglory
