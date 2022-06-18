@@ -14,8 +14,3 @@ DOMAIN-SUFFIX,game-a3.granbluefantasy.jp
 DOMAIN,game-a3.granbluefantasy.jp
 DOMAIN-KEYWORD,game-a3
 DOMAIN-KEYWORD,game-a1
-
-# > Diablo Immortal
-PROCESS-NAME,DiabloImmortal.exe
-PROCESS-NAME,Diablo Immortal Launcher.exe
-PROCESS-NAME,Battle.net.exe
