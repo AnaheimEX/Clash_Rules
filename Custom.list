@@ -22,3 +22,9 @@ DOMAIN-SUFFIX,amazonaws.com
 # > ToTheGlory
 DOMAIN-SUFFIX,totheglory.im
 DOMAIN-KEYWORD,totheglory
+
+# > DMHY
+DOMAIN-SUFFIX,dmhy.org
+DOMAIN-KEYWORD,dmhy
+DOMAIN,u2.dmhy.org
+DOMAIN,share.dmhy.org
