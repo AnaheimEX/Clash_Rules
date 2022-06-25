@@ -25,13 +25,3 @@ dns:
      - 192.168.50.1
   nameserver:
      - tls://dns.alidns.com:853
-  fallback:
-      - tls://1.1.1.1:853
-      - tls://dns.google:853
-  fallback-filter:
-     geoip: true # 默认
-     geoip-code: CN
-     ipcidr:
-     - 240.0.0.0/4
-     - 127.0.0.1/8
-     - 0.0.0.0/32
