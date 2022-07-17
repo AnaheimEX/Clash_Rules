@@ -29,6 +29,10 @@ DOMAIN-KEYWORD,dmhy
 DOMAIN,u2.dmhy.org
 DOMAIN,share.dmhy.org
 
+# > Pexels Video 
+DOMAIN-SUFFIX,akamaized.net
+DOMAIN,vod-progressive.akamaized.net
+
 # > netflix ip
 IP-CIDR,23.246.0.0/18,no-resolve
 IP-CIDR,37.77.184.0/21,no-resolve
