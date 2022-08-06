@@ -14,3 +14,6 @@ DOMAIN-SUFFIX,game-a3.granbluefantasy.jp
 DOMAIN,game-a3.granbluefantasy.jp
 DOMAIN-KEYWORD,game-a3
 DOMAIN-KEYWORD,game-a1
+DOMAIN-SUFFIX,granbluefantasy.akamaized.net
+DOMAIN,prd-game-a1-granbluefantasy.akamaized.net
+DOMAIN-KEYWORD,akamaized
