@@ -48,5 +48,6 @@ IP-CIDR,52.89.124.203/32,no-resolve
 IP-CIDR,54.148.37.5/32,no-resolve
 
 # > Onedrive
-DOMAIN-SUFFIX,mediap.svc.ms
-DOMAIN,mediap.svc.ms
+DOMAIN-SUFFIX,svc.ms
+DOMAIN,southeastasia1-mediap.svc.ms
+DOMAIN-KEYWORD,southeastasia
