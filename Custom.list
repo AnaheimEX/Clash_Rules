@@ -35,4 +35,7 @@ DOMAIN,vod-progressive.akamaized.net
 
 # > Onedrive
 DOMAIN,southeastasia1-mediap.svc.ms
-DOMAIN-KEYWORD,southeastasia
+DOMAIN-KEYWORD,southeastasia1
+DOMAIN-SUFFIX,mediap.svc.ms
+DOMAIN-KEYWORD,mediap
+DOMAIN-SUFFIX,svc.ms
