@@ -38,3 +38,8 @@ DOMAIN,southeastasia1-mediap.svc.ms
 DOMAIN-KEYWORD,southeastasia1
 DOMAIN-SUFFIX,mediap.svc.ms
 DOMAIN-KEYWORD,mediap
+
+# > GameDown
+DOMAIN-SUFFIX,fourpetal.com
+DOMAIN-KEYWORD,fourpetal
+DOMAIN,fourpetal.com
