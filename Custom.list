@@ -38,6 +38,8 @@ DOMAIN,southeastasia1-mediap.svc.ms
 DOMAIN-KEYWORD,southeastasia1
 DOMAIN-SUFFIX,mediap.svc.ms
 DOMAIN-KEYWORD,mediap
+DOMAIN-SUFFIX,sharepoint.cn
+DOMAIN,ks520.sharepoint.cn
 
 # > GameDown
 DOMAIN-SUFFIX,fourpetal.com
@@ -46,3 +48,6 @@ DOMAIN,fourpetal.com
 DOMAIN-SUFFIX,xxxxx520.com
 DOMAIN,xxxxx520.com
 DOMAIN-KEYWORD,xxxxx520
+
+# > IDM
+PROCESS-NAME,IDMan.exe
