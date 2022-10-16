@@ -12,14 +12,6 @@ DOMAIN,game-a1.granbluefantasy.jp
 DOMAIN-SUFFIX,game-a1.granbluefantasy.jp
 DOMAIN-SUFFIX,game-a3.granbluefantasy.jp
 DOMAIN,game-a3.granbluefantasy.jp
-DOMAIN-KEYWORD,game-a3
-DOMAIN-KEYWORD,game-a1
 DOMAIN-SUFFIX,granbluefantasy.akamaized.net
 DOMAIN,prd-game-a1-granbluefantasy.akamaized.net
 DOMAIN-KEYWORD,akamaized
-
-# Tower of Fantasy
-PROCESS-NAME,QRSL.exe
-PROCESS-NAME,wmsdkagent.exe
-PROCESS-NAME,TQMCenter_64.exe
-PROCESS-NAME,tof_launcher.exe
