@@ -45,9 +45,6 @@ DOMAIN,ks520.sharepoint.cn
 DOMAIN-SUFFIX,fourpetal.com
 DOMAIN-KEYWORD,fourpetal
 DOMAIN,fourpetal.com
-DOMAIN-SUFFIX,xxxxx520.com
-DOMAIN,xxxxx520.com
-DOMAIN-KEYWORD,xxxxx520
 
 # > IDM
 PROCESS-NAME,IDMan.exe
