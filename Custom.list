@@ -42,5 +42,7 @@ DOMAIN-SUFFIX,fourpetal.com
 DOMAIN-KEYWORD,fourpetal
 DOMAIN,fourpetal.com
 
-# > IDM
+# > Process
 PROCESS-NAME,IDMan.exe
+PROCESS-NAME,dnplayer.exe
+PROCESS-NAME,HD-Player.exe
