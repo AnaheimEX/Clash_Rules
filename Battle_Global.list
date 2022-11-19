@@ -4,3 +4,7 @@ DOMAIN,blzddist1-a.akamaihd.net
 DOMAIN,blzddistkr1-a.akamaihd.net
 DOMAIN,bnetproduct-a.akamaihd.net
 DOMAIN,cdn.blz-contentstack.com
+DOMAIN,kr.actual.battle.net
+DOMAIN-SUFFIX,kr.actual.battle.net
+DOMAIN-SUFFIX,actual.battle.net
+DOMAIN-SUFFIX,battle.net
