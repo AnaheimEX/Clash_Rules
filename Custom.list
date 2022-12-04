@@ -46,3 +46,5 @@ DOMAIN,fourpetal.com
 PROCESS-NAME,IDMan.exe
 PROCESS-NAME,dnplayer.exe
 PROCESS-NAME,HD-Player.exe
+PROCESS-NAME,SteamService.exe
+PROCESS-NAME,steam.exe
