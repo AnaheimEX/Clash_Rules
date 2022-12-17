@@ -3,6 +3,10 @@ DOMAIN-SUFFIX,battlenet.com.cn
 DOMAIN,telemetry-in.battlenet.com.cn
 DOMAIN-KEYWORD,battlenet
 
+# > Resilio
+DOMAIN,sync.cdn.hk.gosicks.com
+PROCESS-NAME,Resilio Sync,DIRECT
+
 # > QQ
 PROCESS-NAME,QQ.exe
 PROCESS-NAME,
