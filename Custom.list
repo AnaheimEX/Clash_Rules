@@ -44,9 +44,6 @@ DOMAIN,fourpetal.com
 
 # > Process
 PROCESS-NAME,IDMan.exe
-PROCESS-NAME,dnplayer.exe
-PROCESS-NAME,SteamService.exe
-PROCESS-NAME,steam.exe
 
 # > Resili
 DOMAIN,config.resilio.com
