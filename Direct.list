@@ -9,4 +9,8 @@ PROCESS-NAME,Resilio Sync,DIRECT
 
 # > QQ
 PROCESS-NAME,QQ.exe
-PROCESS-NAME,
+PROCESS-NAME,QQ
+
+# > LeiDian Android Emulator
+PROCESS-NAME,dnplayer.exe
+PROCESS-NAME,dnplayer
