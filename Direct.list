@@ -14,3 +14,9 @@ PROCESS-NAME,QQ
 # > LeiDian Android Emulator
 PROCESS-NAME,dnplayer.exe
 PROCESS-NAME,dnplayer
+
+# > Heaven Burns Red
+PROCESS-NAME,HeavenBurnsRed.exe
+PROCESS-NAME,HeavenBurnsRed
+DOMAIN,heaven-burns-red-assets.akamaized.net
+DOMAIN-KEYDOWRD,heaven-burns-red
