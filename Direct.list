@@ -14,6 +14,8 @@ PROCESS-NAME,QQ
 # > LeiDian Android Emulator
 PROCESS-NAME,dnplayer.exe
 PROCESS-NAME,dnplayer
+PROCESS-NAME,Ld9BoxHeadless
+PROCESS-NAME,Ld9BoxHeadless.exe
 
 # > Heaven Burns Red
 PROCESS-NAME,HeavenBurnsRed.exe
