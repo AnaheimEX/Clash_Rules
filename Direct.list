@@ -1,28 +1,20 @@
 # > Battle_cn
 DOMAIN-SUFFIX,battlenet.com.cn
 DOMAIN,telemetry-in.battlenet.com.cn
-DOMAIN-KEYWORD,battlenet
-
-# > Resilio
-DOMAIN,sync.cdn.hk.gosicks.com
-PROCESS-NAME,Resilio Sync
 
 # > QQ
-PROCESS-NAME,QQ.exe
 PROCESS-NAME,QQ
 
 # > LeiDian Android Emulator
-PROCESS-NAME,dnplayer.exe
 PROCESS-NAME,dnplayer
 PROCESS-NAME,Ld9BoxHeadless
-PROCESS-NAME,Ld9BoxHeadless.exe
 
 # > Heaven Burns Red
-PROCESS-NAME,HeavenBurnsRed.exe
 PROCESS-NAME,HeavenBurnsRed
 DOMAIN,heaven-burns-red-assets.akamaized.net
 DOMAIN-KEYWORD,heaven-burns-red
 
+# > Download Client
 PROCESS-NAME,aria2c
 PROCESS-NAME,fdm
 PROCESS-NAME,Folx
