@@ -5,7 +5,7 @@ DOMAIN-KEYWORD,battlenet
 
 # > Resilio
 DOMAIN,sync.cdn.hk.gosicks.com
-PROCESS-NAME,Resilio Sync,DIRECT
+PROCESS-NAME,Resilio Sync
 
 # > QQ
 PROCESS-NAME,QQ.exe
@@ -22,3 +22,14 @@ PROCESS-NAME,HeavenBurnsRed.exe
 PROCESS-NAME,HeavenBurnsRed
 DOMAIN,heaven-burns-red-assets.akamaized.net
 DOMAIN-KEYWORD,heaven-burns-red
+
+PROCESS-NAME,aria2c
+PROCESS-NAME,fdm
+PROCESS-NAME,Folx
+PROCESS-NAME,NetTransport
+PROCESS-NAME,Thunder
+PROCESS-NAME,Transmission
+PROCESS-NAME,uTorrent
+PROCESS-NAME,WebTorrent
+PROCESS-NAME,WebTorrent Helper
+PROCESS-NAME,qBittorrent
