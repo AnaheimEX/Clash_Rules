@@ -19,3 +19,23 @@ dns:
      - 114.114.114.114
   nameserver:
      - tls://dns.alidns.com:853
+
+rule-providers:
+  All Proxies:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/gfw.txt"
+    path: ./ruleset/reject.yaml
+    interval: 86400    
+  All Proxies:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt"
+    path: ./ruleset/proxy.yaml
+    interval: 86400
+  All Proxies:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt"
+    path: ./ruleset/proxy.yaml
+    interval: 86400    
