@@ -140,7 +140,7 @@ proxy-providers:
  
  AMY: # 机场订阅链接
     type: http
-    url: "https://api.nxtlnodes.com/Subscription/ShadowRocketImportService?t=sip002&sid=32867&token=c1c2ZFHqocf"
+    url: "https://api.dler.io/sub?target=clash&url=https%3A%2F%2Fapi.nxtlnodes.com%2FSubscription%2FShadowRocketImportService%3Ft%3Dsip002%26sid%3D32867%26token%3Dc1c2ZFHqocf"
     interval: 3600
     path: ./Server/Airport.yaml # 不同机场不同命名
     health-check:
@@ -150,7 +150,8 @@ proxy-providers:
 
   Hong Kong: # 香港
     type: http
-    url: "https://api.nxtlnodes.com/Subscription/ShadowRocketImportService?t=sip002&sid=32867&token=c1c2ZFHqocf"
+    url: "https://api.dler.io/sub?target=clash&url=https%3A%2F%2Fapi.nxtlnodes.com%2FSubscription%2FShadowRocketImportService%3Ft%3Dsip002%26sid%3D32867%26token%3Dc1c2ZFHqocf"
+    interval: 3600
     path: ./Server/Airport.yaml # 不同机场不同命名
     filter: '香港|HK|hongkong'
     health-check:
@@ -160,43 +161,47 @@ proxy-providers:
 
   Taiwan: # 台湾
     type: http
-    url: "https://api.nxtlnodes.com/Subscription/ShadowRocketImportService?t=sip002&sid=32867&token=c1c2ZFHqocf"
+    url: "https://api.dler.io/sub?target=clash&url=https%3A%2F%2Fapi.nxtlnodes.com%2FSubscription%2FShadowRocketImportService%3Ft%3Dsip002%26sid%3D32867%26token%3Dc1c2ZFHqocf"
+    interval: 3600
     path: ./Server/Airport.yaml # 不同机场不同命名
     filter: '台湾|TW|Taiwan'
     health-check:
         enable: true
         url: http://www.gstatic.com/generate_204
-        interval: 3600
+        interval: 600
 
   Japan: # 日本
     type: http
-    url: "https://api.nxtlnodes.com/Subscription/ShadowRocketImportService?t=sip002&sid=32867&token=c1c2ZFHqocf"
+    url: "https://api.dler.io/sub?target=clash&url=https%3A%2F%2Fapi.nxtlnodes.com%2FSubscription%2FShadowRocketImportService%3Ft%3Dsip002%26sid%3D32867%26token%3Dc1c2ZFHqocf"
+    interval: 3600
     path: ./Server/Airport.yaml # 不同机场不同命名
     filter: '日本|JP|Japan'
     health-check:
         enable: true
         url: http://www.gstatic.com/generate_204
-        interval: 3600
+        interval: 600
         
   Singapore: # 新加坡
     type: http
-    url: "https://api.nxtlnodes.com/Subscription/ShadowRocketImportService?t=sip002&sid=32867&token=c1c2ZFHqocf"
+    url: "https://api.dler.io/sub?target=clash&url=https%3A%2F%2Fapi.nxtlnodes.com%2FSubscription%2FShadowRocketImportService%3Ft%3Dsip002%26sid%3D32867%26token%3Dc1c2ZFHqocf"
+    interval: 3600
     path: ./Server/Airport.yaml # 不同机场不同命名
     filter: '新加坡|SG|Singapore'
     health-check:
         enable: true
         url: http://www.gstatic.com/generate_204
-        interval: 3600
+        interval: 600
         
   United States: # 美国
     type: http
-    url: "https://api.nxtlnodes.com/Subscription/ShadowRocketImportService?t=sip002&sid=32867&token=c1c2ZFHqocf"
+    url: "https://api.dler.io/sub?target=clash&url=https%3A%2F%2Fapi.nxtlnodes.com%2FSubscription%2FShadowRocketImportService%3Ft%3Dsip002%26sid%3D32867%26token%3Dc1c2ZFHqocf"
+    interval: 3600
     path: ./Server/Airport.yaml # 不同机场不同命名
     filter: '美国|US|USA|United States'
     health-check:
         enable: true
         url: http://www.gstatic.com/generate_204
-        interval: 3600
+        interval: 600
         
 proxy-groups:
 # 策略组示例请查阅 Clash 项目 README 以使用最新格式：https://github.com/Dreamacro/clash/blob/master/README.md
