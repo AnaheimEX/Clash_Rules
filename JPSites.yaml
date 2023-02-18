@@ -1,8 +1,4 @@
 payload:
-  - DOMAIN-SUFFIX,20thcenturystudios.com.au
-  - DOMAIN-SUFFIX,20thcenturystudios.com.br
-  - DOMAIN-SUFFIX,20thcenturystudios.jp
-  - DOMAIN-SUFFIX,abc-studios.com
 # > DMM
   - DOMAIN-SUFFIX,DMM.co.jp
   - DOMAIN-SUFFIX,DMM.com
