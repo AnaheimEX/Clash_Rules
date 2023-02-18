@@ -71,15 +71,6 @@ dns:
 
 # 服务器节点订阅
 proxy-providers:
-  AMY: # 机场订阅链接
-    type: http
-    url: "https://api.dler.io/sub?target=clash&url=https%3A%2F%2Fapi.nxtlnodes.com%2FSubscription%2FShadowRocketImportService%3Ft%3Dsip002%26sid%3D32867%26token%3Dc1c2ZFHqocf"
-    interval: 3600
-    path: ./Server/Airport.yaml # 不同机场不同命名
-    health-check:
-      enable: true
-      interval: 600
-      url: http://www.gstatic.com/generate_204
 
   Hong Kong: # 香港
     type: http
@@ -175,7 +166,7 @@ proxy-groups:
   - name: "YouTube"
     type: url-test
     use: 
-      - Hong kong
+      - Hong Kong
       - Japan
 
   - name: "Netflix"
