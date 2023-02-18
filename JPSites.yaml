@@ -1,0 +1,22 @@
+payload:
+  - DOMAIN-SUFFIX,20thcenturystudios.com.au
+  - DOMAIN-SUFFIX,20thcenturystudios.com.br
+  - DOMAIN-SUFFIX,20thcenturystudios.jp
+  - DOMAIN-SUFFIX,abc-studios.com
+# > DMM
+  - DOMAIN-SUFFIX,DMM.co.jp
+  - DOMAIN-SUFFIX,DMM.com
+
+# > GBF
+  - DOMAIN-SUFFIX,granbluefantasy.jp
+  - DOMAIN,game.granbluefantasy.jp
+  - DOMAIN-KEYWORD,granbluefantasy
+  - DOMAIN,game-a.granbluefantasy.jp
+  - DOMAIN-SUFFIX,game-a.granbluefantasy.jp
+  - DOMAIN,game-a1.granbluefantasy.jp
+  - DOMAIN-SUFFIX,game-a1.granbluefantasy.jp
+  - DOMAIN-SUFFIX,game-a3.granbluefantasy.jp
+  - DOMAIN,game-a3.granbluefantasy.jp
+  - DOMAIN-SUFFIX,granbluefantasy.akamaized.net
+  - DOMAIN,prd-game-a1-granbluefantasy.akamaized.net
+  - DOMAIN-KEYWORD,akamaized
