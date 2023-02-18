@@ -1,0 +1,34 @@
+payload:
+  - DOMAIN-SUFFIX,manhuagui.com
+  - DOMAIN-SUFFIX,hamreus.com
+  
+# > Logitechg
+  - DOMAIN-SUFFIX,logitechg.com
+  - DOMAIN-KEYWORD,logitech
+  - DOMAIN-SUFFIX,logitech.com
+
+# > Notion
+  - DOMAIN-SUFFIX,loggly.com
+  - DOMAIN-SUFFIX,segment.com
+  - DOMAIN-SUFFIX,intercom.io
+  - DOMAIN-SUFFIX,intercomcdn.com
+  - DOMAIN-SUFFIX,amplitude.com
+  - DOMAIN-SUFFIX,notion.so
+  - DOMAIN-KEYWORD,notion
+  - DOMAIN-KEYWORD,segment
+  - DOMAIN-KEYWORD,intercomcdn
+  - DOMAIN-SUFFIX,amazonaws.com
+
+# > ToTheGlory
+  - DOMAIN-SUFFIX,totheglory.im
+  - DOMAIN-KEYWORD,totheglory
+
+# > DMHY
+  - DOMAIN-SUFFIX,dmhy.org
+  - DOMAIN-KEYWORD,dmhy
+  - DOMAIN,u2.dmhy.org
+  - DOMAIN,share.dmhy.org
+
+# > Pexels Video 
+  - DOMAIN-SUFFIX,akamaized.net
+  - DOMAIN,vod-progressive.akamaized.net
