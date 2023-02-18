@@ -17,7 +17,7 @@ socks-port: 7891
  
 # Set to true to allow connections to local-end server from
 # other LAN IP addresses
-allow-lan: false
+allow-lan: true
  
 # This is only applicable when `allow-lan` is `true`
 # '*': bind all IP addresses
@@ -36,7 +36,7 @@ mode: rule
 log-level: info
  
 # When set to false, resolver won't translate hostnames to IPv6 addresses
-ipv6: true
+ipv6: false
  
 # RESTful web API listening address
 external-controller: 127.0.0.1:9090
@@ -50,10 +50,7 @@ external-controller: 127.0.0.1:9090
 # Authenticate by spedifying HTTP header `Authorization: Bearer ${secret}`
 # ALWAYS set a secret if RESTful API is listening on 0.0.0.0
 # secret: ""
- 
-# Outbound interface name
-interface-name: en0
- 
+
 # Static hosts for DNS server and connection establishment, only works
 # when `dns.enhanced-mode` is `redir-host`.
 #
@@ -120,7 +117,87 @@ dns:
     geoip: true
     ipcidr:
       # - 240.0.0.0/4
-      
+
+# 服务器节点订阅
+proxy-providers:
+  # name: # Provider 名称
+  #   type: http # http 或 file
+  #   path: # 文件路径
+  #   url: # 只有当类型为 HTTP 时才可用，您不需要在本地空间中创建新文件。
+  #   interval: # 自动更新间隔，仅在类型为 HTTP 时可用
+  #   health-check: # 健康检查选项从此处开始
+  #     enable:
+  #     url: 
+  #     interval: 
+ 
+  #
+  # 「url」参数填写订阅链接
+  #
+  # 订阅链接可以使用 API 进行转换，如：https://sub.dler.io/
+  #
+  # 1.模式选择「进阶模式」 2.填写订阅链接 3.勾选「输出为 Node List」 4.「生成订阅链接」
+  #
+ 
+ AMY: # 机场订阅链接
+    type: http
+    url: "https://api.nxtlnodes.com/Subscription/ShadowRocketImportService?t=sip002&sid=32867&token=c1c2ZFHqocf"
+    interval: 3600
+    path: ./Server/Airport.yaml # 不同机场不同命名
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+
+  Hong Kong: # 香港
+    type: http
+    url: "https://api.nxtlnodes.com/Subscription/ShadowRocketImportService?t=sip002&sid=32867&token=c1c2ZFHqocf"
+    path: ./Server/Airport.yaml # 不同机场不同命名
+    filter: '香港|HK|hongkong'
+    health-check:
+        enable: true
+        url: http://www.gstatic.com/generate_204
+        interval: 3600
+
+  Taiwan: # 台湾
+    type: http
+    url: "https://api.nxtlnodes.com/Subscription/ShadowRocketImportService?t=sip002&sid=32867&token=c1c2ZFHqocf"
+    path: ./Server/Airport.yaml # 不同机场不同命名
+    filter: '台湾|TW|Taiwan'
+    health-check:
+        enable: true
+        url: http://www.gstatic.com/generate_204
+        interval: 3600
+
+  Japan: # 日本
+    type: http
+    url: "https://api.nxtlnodes.com/Subscription/ShadowRocketImportService?t=sip002&sid=32867&token=c1c2ZFHqocf"
+    path: ./Server/Airport.yaml # 不同机场不同命名
+    filter: '日本|JP|Japan'
+    health-check:
+        enable: true
+        url: http://www.gstatic.com/generate_204
+        interval: 3600
+        
+  Singapore: # 新加坡
+    type: http
+    url: "https://api.nxtlnodes.com/Subscription/ShadowRocketImportService?t=sip002&sid=32867&token=c1c2ZFHqocf"
+    path: ./Server/Airport.yaml # 不同机场不同命名
+    filter: '新加坡|SG|Singapore'
+    health-check:
+        enable: true
+        url: http://www.gstatic.com/generate_204
+        interval: 3600
+        
+  United States: # 美国
+    type: http
+    url: "https://api.nxtlnodes.com/Subscription/ShadowRocketImportService?t=sip002&sid=32867&token=c1c2ZFHqocf"
+    path: ./Server/Airport.yaml # 不同机场不同命名
+    filter: '美国|US|USA|United States'
+    health-check:
+        enable: true
+        url: http://www.gstatic.com/generate_204
+        interval: 3600
+        
 proxy-groups:
 # 策略组示例请查阅 Clash 项目 README 以使用最新格式：https://github.com/Dreamacro/clash/blob/master/README.md
  
@@ -133,129 +210,78 @@ proxy-groups:
 #
 # 「PROXY」是代理规则策略，它可以指定为某个节点或嵌套一个其他策略组，如：「自动测试」、「Fallback」或「负载均衡」的策略组，关于这 3 个策略组的具体示例可以看官方示例：https://github.com/Dreamacro/clash
 #
- 
-  # Fallback 比较实用的策略组类型，用于测试服务器节点的可用性，当第一个节点不可用时切换到第二个，以此类推。
-  - name: "Fallback"
-    type: fallback
-    proxies:
-      - 测试V2RAY
-      - Trojan测试
-    url: 'http://www.gstatic.com/generate_204'
-    interval: 300
 
   # 代理节点选择
   - name: "Proxy"
     type: url-test
     use: 
       - Hong Kong
+      - Taiwan
+      - Japn
+      - Singapore
       - United States
- 
-  # 白名单模式 PROXY, 黑名单模式 DIRECT, 不知道别动
-  - name: "MATCH"
-    type: select
-    proxies:
-      - PROXY
-      - DIRECT
-
-  - name: "China"
-    type: select
+  
+  - name: "JPSite"
+    type: url-test
     proxies: 
-      - DIRECT
-  
-  - name: "WeChat"
-    type: url-test
-    use: 
-      - Japan 
-  
-  - name: "Tencent"
-    type: url-test
-    use: 
       - Japan
-
-  - name: "TencentVideo"
-    type: select
+      
+  - name: "Manhuagui"
+    type: fallback
     proxies: 
-      - DIRECT
-
-  - name: "Speedtest"
-    type: select
-    proxies: 
-      - DIRECT
-
+      - Taiwan
+    url: 'https://www.manhuagui.com'
+    interval: 300
+          
   - name: "Apple"
-    type: url-test
+    type: select
     use: 
-      - United States
+      - DIRECT
+      - Japan
   
   - name: "Microsoft"
     type: url-test
     use: 
-      - United States
-  
-  - name: "Adobe"
-    type: url-test
-    use: 
-      - United States
-  
-  - name: "Amazon"
-    type: url-test
-    use: 
-      - United States
-
-  - name: "paypal"
-    type: url-test
-    use: 
-      - United States
-
-  - name: "GitHub"
-    type: url-test
-    use: 
-      - Japan
-
-  - name: "Google"
-    type: url-test
-    use: 
-      - United States
+      - DIRECT
+      - Japn
+      - Hong Kong
 
   - name: "YouTube"
     type: url-test
     use: 
-      - United States
+      - Hong kong
+      - Japan
 
   - name: "Netflix"
     type: url-test
     use: 
-      - United States
+      - Singapore
+      - Japan
+      - Taiwan
+      
+  - name: "Disney"
+    type: url-test
+    use: 
+      - Hong Kong
+      - Singapore
+      - Taiwan
+      
+  - name: "Youtube"
+    type: url-test
+    use: 
+      - Hong Kong
+      - Singapore
+      - Taiwan     
+      
   - name: "Steam"
-    type: url-test
-    use: 
-      - United States
-
-  - name: "Spotify"
-    type: url-test
-    use: 
-      - United States
-
-  - name: "Telegram"
     type: url-test
     use: 
       - Japan
 
-  - name: "Twitter"
+  - name: "Telegram"
     type: url-test
     use: 
-      - Hong Kong
- 
-  - name: "Facebook"
-    type: url-test
-    use: 
-      - United Kingdom
- 
-  # 手动选择节点订阅
-  - name: "Airport-Sub"
-    type: select # 亦可使用 fallback 或 load-balance
-    use:
-      - Airport-Sub
+      - Singapore
  
 # 关于 Rule Provider 请查阅：https://lancellc.gitbook.io/clash/clash-config-file/rule-provider
  
@@ -288,19 +314,6 @@ rule-providers:
     url: https://raw.githubusercontent.com/Semporia/Clash/master/Rule/Apple.yaml
     interval: 3600
 
-  Adobe: 
-    type: http
-    behavior: classical
-    path: ./Rule/Adobe.yaml
-    url: https://raw.githubusercontent.com/Semporia/Clash/master/Rule/Adobe.yaml
-    interval: 3600
-  Amazon: 
-    type: http
-    behavior: classical
-    path: ./Rule/Amazon.yaml
-    url: https://raw.githubusercontent.com/Semporia/Clash/master/Rule/Amazon.yaml
-    interval: 3600
-
   China: 
     type: http
     behavior: classical
@@ -308,26 +321,41 @@ rule-providers:
     url: https://raw.githubusercontent.com/Semporia/Clash/master/Rule/China.yaml
     interval: 3600
 
-  Dler: 
+  Bilibili: 
     type: http
     behavior: classical
-    path: ./Rule/Dler.yaml
-    url: https://raw.githubusercontent.com/Semporia/Clash/master/Rule/Dler.yaml
+    path: ./Rule/China.yaml
+    url: https://raw.githubusercontent.com/Semporia/Clash/master/Rule/BiliBili.yaml
+    interval: 3600
+    
+  Direct: 
+    type: http
+    behavior: classical
+    path: ./Rule/China.yaml
+    url: https://raw.githubusercontent.com/AnaheimEX/Clash_Rules/master/Direct.yaml
+    interval: 3600
+    
+  JPSite: 
+    type: http
+    behavior: classical
+    path: ./Rule/China.yaml
+    url: https://raw.githubusercontent.com/AnaheimEX/Clash_Rules/master/JPSites.yaml
+    interval: 3600
+    
+  Custom: 
+    type: http
+    behavior: classical
+    path: ./Rule/China.yaml
+    url: https://raw.githubusercontent.com/AnaheimEX/Clash_Rules/master/custom.yaml
     interval: 3600
 
-  Facebook: 
+  Comic: 
     type: http
     behavior: classical
-    path: ./Rule/Facebook.yaml
-    url: https://raw.githubusercontent.com/Semporia/Clash/master/Rule/Facebook.yaml
+    path: ./Rule/Google.yaml
+    url: https://raw.githubusercontent.com/AnaheimEX/Clash_Rules/master/Comic.yaml
     interval: 3600
-
-  GitHub: 
-    type: http
-    behavior: classical
-    path: ./Rule/GitHub.yaml
-    url: https://raw.githubusercontent.com/Semporia/Clash/master/Rule/GitHub.yaml
-    interval: 3600
+    
   Google: 
     type: http
     behavior: classical
@@ -346,21 +374,9 @@ rule-providers:
     type: http
     behavior: classical
     path: ./Rule/Netflix.yaml
-    url: https://raw.githubusercontent.com/Semporia/Clash/master/Rule/Netflix.yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.yaml
     interval: 3600
-  
-  Spotify: 
-    type: http
-    behavior: classical
-    path: ./Rule/Spotify.yaml
-    url: https://raw.githubusercontent.com/Semporia/Clash/master/Rule/Spotify.yaml
-    interval: 3600
-  Speedtest: 
-    type: http
-    behavior: classical
-    path: ./Rule/Speedtest.yaml
-    url: https://raw.githubusercontent.com/Semporia/Clash/master/Rule/Speedtest.yaml
-    interval: 3600
+
   Steam: 
     type: http
     behavior: classical
@@ -374,23 +390,12 @@ rule-providers:
     path: ./Rule/Telegram.yaml
     url: https://raw.githubusercontent.com/Semporia/Clash/master/Rule/Telegram.yaml
     interval: 3600
-  Twitter: 
-    type: http
-    behavior: classical
-    path: ./Rule/Twitter.yaml
-    url: https://raw.githubusercontent.com/Semporia/Clash/master/Rule/Twitter.yaml
-    interval: 3600
+
   Tencent: 
     type: http
     behavior: classical
     path: ./Rule/Tencent.yaml
     url: https://raw.githubusercontent.com/Semporia/Clash/master/Rule/Tencent.yaml
-    interval: 3600
-  TencentVideo: 
-    type: http
-    behavior: classical
-    path: ./Rule/TencentVideo.yaml
-    url: https://raw.githubusercontent.com/Semporia/Clash/master/Rule/TencentVideo.yaml
     interval: 3600
 
   YouTube: 
@@ -399,51 +404,41 @@ rule-providers:
     path: ./Rule/YouTube.yaml
     url: https://raw.githubusercontent.com/Semporia/Clash/master/Rule/YouTube.yaml
     interval: 3600
-
-  PayPal: 
+    
+  DisneyPlus: 
     type: http
     behavior: classical
-    path: ./Rule/PayPal.yaml
-    url: https://raw.githubusercontent.com/Semporia/Clash/master/Rule/PayPal.yaml
-    interval: 3600
-  Discord: 
-    type: http
-    behavior: classical
-    path: ./Rule/Discord.yaml
-    url: https://raw.githubusercontent.com/Semporia/Clash/master/Rule/Discord.yaml
-    interval: 3600
+    path: ./Rule/Proxy.yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Disney/Disney.yaml
+    interval: 3600    
+    
   Proxy: 
     type: http
     behavior: classical
     path: ./Rule/Proxy.yaml
-    url: https://raw.githubusercontent.com/Semporia/Clash/master/Rule/Proxy.yaml
-    interval: 3600
- 
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Proxy/Proxy_Domain.yaml
+    interval: 3600 
  
 # 规则
 rules:
   - RULE-SET,AdBlock,REJECT
   - RULE-SET,Proxy,Proxy
-  - RULE-SET,Apple,Apple
-  - RULE-SET,Adobe,Adobe
-  - RULE-SET,Amazon,Amazon
-  - RULE-SET,Dler,Dler
-  - RULE-SET,Facebook,Facebook 
-  - RULE-SET,GitHub,GitHub
-  - RULE-SET,Google,Google
+  - RULE-SET,JPSite,JPSite
+  - RULE-SET,Manhuagui,Comic
+  - RULE-SET,Custom,Proxy
+  - RULE-SET,Google,Proxy
   - RULE-SET,Microsoft,Microsoft
   - RULE-SET,Netflix,Netflix 
-  - RULE-SET,Speedtest,Speedtest
+  - RULE-SET,DisneyPlus,Disney
   - RULE-SET,Steam,Steam
-  - RULE-SET,Spotify,Spotify
-  - RULE-SET,Telegram,Telegram 
-  - RULE-SET,Twitter,Twitter 
-  - RULE-SET,Tencent,Tencent
-  - RULE-SET,TencentVideo,TencentVideo
+  - RULE-SET,Telegram,Telegram
+  - RULE-SET,Bilibili,DIRECT
+  - RULE-SET,Tencent,DIRECT
+  - RULE-SET,TencentVideo,DIRECT
+  - RULE-SET,Direct,DIRECT
+  - RULE-SET,China,DIRECT
   - RULE-SET,YouTube,YouTube 
-  - RULE-SET,PayPal,paypal
-  - RULE-SET,Discord,Discord
-  - DOMAIN-SUFFIX,live.cn,China
+  - DOMAIN-SUFFIX,live.cn,DIRECT
  
   # Local Area Network
   - IP-CIDR,192.168.0.0/16,DIRECT
@@ -460,5 +455,4 @@ rules:
   - IP-CIDR,182.254.116.0/24,DIRECT
   # GeoIP China
   - GEOIP,CN,DIRECT
- 
-  - MATCH,MATCH
+  - MATCH,Proxy
