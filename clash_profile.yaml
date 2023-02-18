@@ -148,7 +148,7 @@ proxy-groups:
     proxies: 
       - Taiwan
     url: 'https://www.manhuagui.com'
-    interval: 300
+    interval: 600
           
   - name: "Apple"
     type: select
@@ -160,7 +160,7 @@ proxy-groups:
     type: url-test
     use: 
       - DIRECT
-      - Japn
+      - Japan
       - Hong Kong
 
   - name: "YouTube"
@@ -188,7 +188,7 @@ proxy-groups:
     use: 
       - Hong Kong
       - Singapore
-      - Taiwan     
+      - Taiwan    
       
   - name: "Steam"
     type: url-test
