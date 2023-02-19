@@ -32,3 +32,6 @@ payload:
 # > Pexels Video 
   - DOMAIN-SUFFIX,akamaized.net
   - DOMAIN,vod-progressive.akamaized.net
+  
+# > Process
+  - PROCESS-NAME,IDMan.exe
