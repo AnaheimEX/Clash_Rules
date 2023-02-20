@@ -34,4 +34,6 @@ payload:
   - DOMAIN,vod-progressive.akamaized.net
   
 # > Process
-  - PROCESS-NAME,IDMan.exe
+  - PROCESS-NAME,IDMan
+  - PROCESS-NAME,XboxPcApp
+  - PROCESS-NAME,GameBar
