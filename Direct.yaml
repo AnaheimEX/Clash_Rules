@@ -13,3 +13,7 @@ payload:
   - PROCESS-NAME,WebTorrent
   - PROCESS-NAME,WebTorrent Helper
   - PROCESS-NAME,qBittorrent
+  
+# > LeiDian Android Emulator
+  - PROCESS-NAME,dnplayer
+  - PROCESS-NAME,Ld9BoxHeadless
