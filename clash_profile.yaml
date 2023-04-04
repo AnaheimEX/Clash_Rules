@@ -326,6 +326,11 @@ rule-providers:
 # 规则
 rules:
   - RULE-SET,AdBlock,REJECT
+  - RULE-SET,TencentVideo,DIRECT
+  - RULE-SET,Direct,DIRECT
+  - RULE-SET,China,DIREC
+  - RULE-SET,Bilibili,DIRECT
+  - RULE-SET,Tencent,DIRECT
   - RULE-SET,Proxy,Proxy
   - RULE-SET,JPSite,JPSite
   - RULE-SET,Manhuagui,Comic
@@ -336,11 +341,6 @@ rules:
   - RULE-SET,DisneyPlus,Disney
   - RULE-SET,Steam,Steam
   - RULE-SET,Telegram,Telegram
-  - RULE-SET,Bilibili,DIRECT
-  - RULE-SET,Tencent,DIRECT
-  - RULE-SET,TencentVideo,DIRECT
-  - RULE-SET,Direct,DIRECT
-  - RULE-SET,China,DIRECT
   - RULE-SET,YouTube,YouTube 
   - DOMAIN-SUFFIX,live.cn,DIRECT
  
