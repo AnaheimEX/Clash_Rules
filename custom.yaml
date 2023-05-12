@@ -37,3 +37,4 @@ payload:
   - PROCESS-NAME,IDMan
   - PROCESS-NAME,XboxPcApp
   - PROCESS-NAME,GameBar
+  - PROCESS-NAME,Agent
